@@ -34,9 +34,9 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 [Params.sidebar]
   home = "right" # Configure layout for home page
   list = "left"  # Configure layout for list pages
-  single = false # Configure layout for single pages
+  single = true # Configure layout for single pages
   # Enable widgets in given order
-  widgets = ["search", "recent", "categories", "taglist", "social", "languages"]
+  widgets = ["search", "recent", "categories", "taglist", "social"]
 
 [Params.widgets]
   recent_num = 5 # Set the number of articles in the "Recent articles" widget
