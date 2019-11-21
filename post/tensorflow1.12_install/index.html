@@ -10,7 +10,7 @@
 	<meta property="og:title" content="Brisk Guide to Install Tensorflow GPU on Linux (Ubuntu 18.04/18.10)" />
 <meta property="og:description" content="My system configuration  AMD Ryzen 2600 16 GB DDR4 3200 MHz memory GTX 1050 ti 4 GB Ubuntu 18.04 Bionic Beaver  Remove Nvidia Nouveau Driver Blacklist the driver $ sudo bash -c &quot;echo blacklist nouveau &gt; /etc/modprobe.d/blacklist-nvidia-nouveau.conf&quot; $ sudo bash -c &quot;echo options nouveau modeset=0 &gt;&gt; /etc/modprobe.d/blacklist-nvidia-nouveau.conf&quot;  Confirm the content of the new modprobe config file $ cat /etc/modprobe.d/blacklist-nvidia-nouveau.conf blacklist nouveau options nouveau modeset=0  Update kernel initramfs $ sudo update-initramfs -u  Reboot $ sudo reboot  Remove Any Other NVIDIA Driver Add the graphics driver PPA $ sudo add-apt-repository ppa:graphics-drivers/ppa $ sudo apt-get update  Purge the driver $ sudo apt-get purge nvidia*  Reboot $ sudo reboot  Install Proprietary Nvidia Driver $ sudo apt update $ sudo ubuntu-drivers autoinstall $ sudo reboot  After this, nvidia-smi command will output the GPU status." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/post/tensorflow1.12_install/" />
+<meta property="og:url" content="https://rednafi.github.io/red-blogs/post/tensorflow1.12_install/" />
 <meta property="article:published_time" content="2019-02-09T00:00:00+00:00" />
 <meta property="article:modified_time" content="2019-02-09T00:00:00+00:00" />
 
@@ -21,9 +21,9 @@
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
-	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/css/custom.css">
-	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="stylesheet" href="/red-blogs/css/style.css">
+	<link rel="stylesheet" href="/red-blogs/css/custom.css">
+	<link rel="shortcut icon" href="/red-blogs/favicon.ico">
 		
 </head>
 <body class="body">
@@ -31,7 +31,7 @@
 		<header class="header">
 	<div class="container">
 		<div class="logo">
-			<a class="logo__link" href="/" title="Redowan&#39;s Musings" rel="home">
+			<a class="logo__link" href="/red-blogs" title="Redowan&#39;s Musings" rel="home">
 				<div class="logo__title">Redowan&#39;s Musings</div>
 				<div class="logo__tagline">Just another site</div>
 			</a>
@@ -43,7 +43,7 @@
 	</button>
 	<ul class="menu__list">
 		<li class="menu__item">
-			<a class="menu__link" href="/about/">
+			<a class="menu__link" href="/red-blogs/about/">
 				
 				<span class="menu__text">About Hugo</span>
 				
@@ -188,10 +188,10 @@ with tf.Session() as sess:
 
 <nav class="post-nav flex">
 	<div class="post-nav__item post-nav__item--prev">
-		<a class="post-nav__link" href="/post/electric_nostalgia/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Electric Nostalgia</p></a>
+		<a class="post-nav__link" href="/red-blogs/post/electric_nostalgia/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Electric Nostalgia</p></a>
 	</div>
 	<div class="post-nav__item post-nav__item--next">
-		<a class="post-nav__link" href="/post/mysql_linux/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Brisk Guide to Set Up MySQL on Linux</p></a>
+		<a class="post-nav__link" href="/red-blogs/post/mysql_linux/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Brisk Guide to Set Up MySQL on Linux</p></a>
 	</div>
 </nav>
 
@@ -209,8 +209,8 @@ with tf.Session() as sess:
 	</div>
 </footer>
 	</div>
-<script async defer src="/js/menu.js"></script>
-<script src="/js/custom.js"></script>
+<script async defer src="/red-blogs/js/menu.js"></script>
+<script src="/red-blogs/js/custom.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
 </body>
 </html>
