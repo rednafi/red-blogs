@@ -1,4 +1,4 @@
-baseurl = "http://localhost:1313"
+baseurl = "https://rednafi.github.io/red-blogs"
 title = "Redowan's Musings"
 languageCode = "en-us"
 paginate = "10" # Number of posts per page
