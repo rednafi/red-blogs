@@ -23,7 +23,7 @@ echo "Generating site"
 hugo -t mainroad
 
 echo "Updating gh-pages branch"
-cd public && git add --all && git commit -m "publishing to gh-pages (publish.sh)"
+cd public && git add --all && git commit -m "Publishing to gh-pages (publish.sh)"
 
 echo "Pushing to github"
 git push --all
