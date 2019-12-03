@@ -20,7 +20,7 @@ echo "Removing existing files"
 rm -rf public/*
 
 echo "Generating site"
-hugo
+hugo -t mainroad
 
 echo "Updating gh-pages branch"
 cd public && git add --all && git commit -m "publishing to gh-pages (publish.sh)"
