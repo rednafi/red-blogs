@@ -6,9 +6,28 @@
     <description>Recent content in Categories on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <lastBuildDate>Tue, 29 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://rednafi.github.io/red-blogs/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Linux</title>
+      <link>https://rednafi.github.io/red-blogs/categories/linux/</link>
+      <pubDate>Tue, 29 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://rednafi.github.io/red-blogs/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linus</title>
+      <link>https://rednafi.github.io/red-blogs/categories/linus/</link>
+      <pubDate>Sun, 26 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://rednafi.github.io/red-blogs/categories/linus/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

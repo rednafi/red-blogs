@@ -9,7 +9,21 @@
   </url>
   
   <url>
+    <loc>https://rednafi.github.io/red-blogs/categories/</loc>
+    <lastmod>2019-10-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://rednafi.github.io/red-blogs/</loc>
+    <lastmod>2019-10-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://rednafi.github.io/red-blogs/categories/linux/</loc>
     <lastmod>2019-10-29T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -18,6 +32,34 @@
   <url>
     <loc>https://rednafi.github.io/red-blogs/post/</loc>
     <lastmod>2019-10-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://rednafi.github.io/red-blogs/tags/shell/</loc>
+    <lastmod>2019-10-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://rednafi.github.io/red-blogs/tags/</loc>
+    <lastmod>2019-10-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://rednafi.github.io/red-blogs/tags/zsh/</loc>
+    <lastmod>2019-10-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://rednafi.github.io/red-blogs/tags/bash/</loc>
+    <lastmod>2019-09-05T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -37,21 +79,36 @@
   </url>
   
   <url>
-    <loc>https://rednafi.github.io/red-blogs/post/books/18-05_electric_nostalgia/</loc>
+    <loc>https://rednafi.github.io/red-blogs/tags/database/</loc>
+    <lastmod>2019-05-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://rednafi.github.io/red-blogs/categories/linus/</loc>
+    <lastmod>2019-05-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://rednafi.github.io/red-blogs/tags/mysql/</loc>
+    <lastmod>2019-05-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://rednafi.github.io/red-blogs/post/18-05_electric_nostalgia/</loc>
     <lastmod>2018-05-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://rednafi.github.io/red-blogs/post/17-06_murder_ackroyd/</loc>
+    <loc>https://rednafi.github.io/red-blogs/post/books/17-06_murder_ackroyd/</loc>
     <lastmod>2017-06-27T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://rednafi.github.io/red-blogs/categories/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -60,12 +117,6 @@
     <loc>https://rednafi.github.io/red-blogs/search/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.1</priority>
-  </url>
-  
-  <url>
-    <loc>https://rednafi.github.io/red-blogs/tags/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
 </urlset>

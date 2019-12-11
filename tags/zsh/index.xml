@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zsh on Even - A super concise theme for Hugo</title>
+    <link>https://rednafi.github.io/red-blogs/tags/zsh/</link>
+    <description>Recent content in Zsh on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 29 Oct 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://rednafi.github.io/red-blogs/tags/zsh/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A Minimalistic Approach to Zsh</title>
+      <link>https://rednafi.github.io/red-blogs/post/linux/19-10_zsh_installation/</link>
+      <pubDate>Tue, 29 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://rednafi.github.io/red-blogs/post/linux/19-10_zsh_installation/</guid>
+      <description>Although I&#39;m on Debian Linux, Apple&#39;s recent announcement about replacing Bash with Zsh on MacOS made me take a look at Z-shell aka zsh. It&#39;s a POSIX compliant Bash alternative that has been around for quite a long time. While Bash shell&#39;s efficiency and ubiquity make it hard to think about changing the default shell of your primary development machine, I find its features as an interactive shell to be somewhat limited.</description>
+    </item>
+    
+  </channel>
+</rss>

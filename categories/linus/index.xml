@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linus on Even - A super concise theme for Hugo</title>
+    <link>https://rednafi.github.io/red-blogs/categories/linus/</link>
+    <description>Recent content in Linus on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 May 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://rednafi.github.io/red-blogs/categories/linus/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Brisk Guide to Set Up MySQL on Linux</title>
+      <link>https://rednafi.github.io/red-blogs/post/19-05_mysql_linux/</link>
+      <pubDate>Sun, 26 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://rednafi.github.io/red-blogs/post/19-05_mysql_linux/</guid>
+      <description>Setting Up Installation This part describes a basic installation of a MySQL 5.7 database server on Ubuntu Linux, 18.04 to be specific.
+sudo apt-get update sudo apt-get install mysql-server  Allow Remote Access If you want to connect to the MySQL database from another machine, you must open a port in your server’s firewall (the default port is 3306). This is not necessary if you intend to run the application that uses MySQL on the same server.</description>
+    </item>
+    
+  </channel>
+</rss>

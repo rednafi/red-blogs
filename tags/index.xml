@@ -6,9 +6,55 @@
     <description>Recent content in Tags on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <lastBuildDate>Tue, 29 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://rednafi.github.io/red-blogs/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Shell</title>
+      <link>https://rednafi.github.io/red-blogs/tags/shell/</link>
+      <pubDate>Tue, 29 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://rednafi.github.io/red-blogs/tags/shell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Zsh</title>
+      <link>https://rednafi.github.io/red-blogs/tags/zsh/</link>
+      <pubDate>Tue, 29 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://rednafi.github.io/red-blogs/tags/zsh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bash</title>
+      <link>https://rednafi.github.io/red-blogs/tags/bash/</link>
+      <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://rednafi.github.io/red-blogs/tags/bash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Database</title>
+      <link>https://rednafi.github.io/red-blogs/tags/database/</link>
+      <pubDate>Sun, 26 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://rednafi.github.io/red-blogs/tags/database/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MySQL</title>
+      <link>https://rednafi.github.io/red-blogs/tags/mysql/</link>
+      <pubDate>Sun, 26 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://rednafi.github.io/red-blogs/tags/mysql/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
