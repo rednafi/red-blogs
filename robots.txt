@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://redowan.github.io/red-blogs/sitemap.xml
