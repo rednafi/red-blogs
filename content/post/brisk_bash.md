@@ -6,35 +6,11 @@ draft: false
 
 ![Example image](https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80)
 
-## Table of Contents
-- [Introduction](#introduction)
-- [Shell](#shell)
-- [History](#history)
-- [A Few Basic Commands](#a-few-basic-commands)
-    - [cd](#cd)
-    - [ls](#ls)
-    - [cat](#cat)
-    - [cp](#cp)
-    - [mv](#mv)
-    - [mkdir](#mkdir)
-    - [rm](#rm)
-    - [grep](#grep)
-    - [lp](#lp)
-    - [clear](#clear)
-    - [exit](#exit)
-- [Basic Scripting Examples](#basic-scripting-examples)
-    - [Running a Shell Script](#running-a-shell-script)
-        - [conditionals (if-else)](#conditionals-if-else)
-        - [for loop](#for-loop)
-        - [while loop](#while-loop)
-        - [functions](#functions)
-- [External Resource](#external-resources)
-
-## Introduction
+## **Introduction**
 
 Okay, here's a confession. I'm the type of person who never picks up a new skill unless I absolutely have to. Although I have been using Debian based Linux personally and professionally for over a year, my knowledge on the command line and bash scripting have hopelessly remained stuck in a local minimum. Sure, I know my way around the terminal but working as a data scientist didn't require me to know the nitty-gritty details of bash scripting. And also, I have this tendency of solving every sort of automation and scripting problem with python but often that extra layer of dependency is undesirable. So, as I have started to learn the syntax and quirks of shell language consciously, I thought why not document the whole process. That gave birth to this. Treat this as a beginner's guide to grasp the most necessary details of shell scripting to get the job done.
 
-## Shell
+## **Shell**
 
 Several layers of events take place whenever a Linux command is entered into the terminal. The top layer of that is known as _shell_.
 
@@ -52,7 +28,7 @@ This command will perform the following tasks:
 - Sort the numbers in the `numbers.txt` files in ascending order
 - Save the result in a new file called `sorted_numbers.txt` in the same directory
 
-## History
+## **History**
 
 The first major shell was the Bourne shell (named after its inventor, Steven Bourne); it was included in the first popular version of UNIX, Version 7, starting in 1979. The Bourne shell is known on the system as `sh`. Although UNIX has gone through many, many changes, the Bourne shell is still popular and essentially unchanged. Several UNIX utilities and administration features depend on it.
 
@@ -64,7 +40,7 @@ Variants of some popular shells:
 
 BASH is going to be our primary focus here.
 
-## A Few Basic Commands
+## **A Few Basic Commands**
 
 List of most frequently used commands. All of these commands can be run directly from a bash command prompt:
 
@@ -83,7 +59,7 @@ All of the following command summaries can be found via:
 ```bash
 curl cheat.sh/<prompt>
 ```
-### cd
+### **cd**
 
 `cd` is used to change directory
 
@@ -101,7 +77,7 @@ cd ..
 cd -
 ```
 
-### ls
+### **ls**
 
 `ls` lists all the files and folders in a user-specified directory
 
@@ -125,7 +101,7 @@ ls -d */
 ls -d .*/ */
 ```
 
-### cat
+### **cat**
 
 `cat` shows the contents of a user-specified file
 
@@ -140,7 +116,7 @@ cat -n /path/to/foo
 cat -b /path/to/foo
 ```
 
-### cp
+### **cp**
 
 `cp` copies files or folders from one directory to another
 
@@ -158,7 +134,7 @@ cp -i ~/Desktop/foo.txt ~/Documents/foo.txt
 cp foo.txt{,."$(date +%Y%m%d-%H%M%S)"}
 ```
 
-### mv
+### **mv**
 
 `mv` moves files or folders from one directory to another and can also be used to rename files or folders
 
@@ -182,7 +158,7 @@ mv -n ~/Desktop/foo.txt ~/Documents/foo.txt
 mv -t ~/Desktop/ file1 file2 file3
 ```
 
-### mkdir
+### **mkdir**
 
 `mkdir` is used to create a folder in a directory
 ```bash
@@ -196,7 +172,7 @@ mkdir -p foo/{bar,baz}
 mkdir -p foo/{bar,baz/{zip,zap}}
 ```
 
-### rm
+### **rm**
 
 `rm` is mainly used to delete files or folders
 
@@ -211,7 +187,7 @@ rm -f path/to/the/target
 find /tmp/ -inum 6666 -exec rm -i '{}' \;
 ```
 
-### grep
+### **grep**
 
 `grep` can be used to search through the output of another command
 
@@ -247,7 +223,7 @@ ps aux | grep '[h]ttpd'
 ps aux | grep -E --color 'bash|$'
 ```
 
-### lp
+### **lp**
 
 `lp` prints the specified output via an available printer
 
@@ -274,7 +250,7 @@ lp -P 1,3-5,16 path/to/filename
 lp -i job_id -H resume
 ```
 
-### clear
+### **clear**
 
 `clear` is used to clear the CLI window
 
@@ -286,7 +262,7 @@ lp -i job_id -H resume
 clear
 ```
 
-### exit
+### **exit**
 
 `exit` closes the CLI window
 
@@ -306,11 +282,11 @@ exit /b
 exit exit_code
 ```
 
-## Basic Scripting Examples
+## **Basic Scripting Examples**
 
 When you need to execute multiple shell commands sequentially or want to do more complex stuffs, it's better to enclose the commands in a bash script.
 
-### Running a Shell Script
+### **Running a Shell Script**
 
 * Create a file with `.sh` extension. I have used Ubuntu's built-in `nano` editor for that.
 
@@ -337,7 +313,7 @@ When you need to execute multiple shell commands sequentially or want to do more
     ```
 
 
-### conditionals (if-else)
+### **conditionals (if-else)**
 
 * **Example-1:** This program,
     - Takes in two integers as arguments
@@ -448,7 +424,7 @@ When you need to execute multiple shell commands sequentially or want to do more
     25
     ```
 
-### for loop
+### **for loop**
 
 * **Example-1:** Looping through 0 to 9 with increment 3 and printing the numbers
 
@@ -544,7 +520,7 @@ When you need to execute multiple shell commands sequentially or want to do more
     99
     ```
 
-### while loop
+### **while loop**
 
 * **Example-1:** This program,
     - Takes in a single integer as an argument
@@ -626,7 +602,7 @@ When you need to execute multiple shell commands sequentially or want to do more
     10
     ```
 
-### functions
+### **functions**
 
 Functions are incredible tools when we need to reuse code. Creating functions are fairly straight
 forward in bash.
@@ -725,9 +701,9 @@ forward in bash.
     /home/redowan/code/bash/files/numbers.txt
     /home/redowan/code/bash/files/sorted_numbers.txt
     ```
-## Some Good Practices
+## **Some Good Practices**
 
-### Use a Bash Strict Mode
+### **Use a Bash Strict Mode**
 Your bash scripts will be more robust, reliable and easy to debug if it starts with:
 
 ```bash
@@ -753,12 +729,12 @@ Let's have a look at each of them separately.
 
 For a more in depth explanation of the different settings and Bash Strict Mode in general, check out, [AAron Maxwell's blog](http://redsymbol.net/articles/unofficial-bash-strict-mode/) on this topic.
 
-### Double Quote Your Variables
+### **Double Quote Your Variables**
 It is generally a good practice to double quote your variables, specially user input variables where spaces are involved.
 
 
 
-## External Resources
+## **External Resources**
 
 Here are some awesome sources where you can always look into if you get stuck:
 

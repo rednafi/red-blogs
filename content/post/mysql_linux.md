@@ -6,39 +6,16 @@ draft: false
 ![Example image](https://images.unsplash.com/photo-1544383835-bda2bc66a55d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1921&q=80)
 
 
-## Table of Contents
+## **Setting Up**
 
--   [**Setting Up**](#setting-up)
-
-    -   [Installation](#installation)
-    -   [Allow Remote Access](#allow-remote-access)
-    -   [Start MySQL Service](#start-mysql-service)
-    -   [Launch at Reboot](#launch-at-reboot)
-    -   [Start the MySQL Shell](#start-the-mysql-shell)
-    -   [Set the Root Password](#set-the-root-password)
-    -   [View Users](#view-users)
-    -   [Create a Database](#create-a-database)
-    -   [Creating Dummy Table in the Database](#creating-dummy-table-in-the-database)
-    -   [Delete a Database](#delete-a-database)
-    -   [Add a Database User](#add-a-database-user)
-    -   [Delete a Database User](#delete-a-database-user)
-    -   [Grant Database User Permissions](#grant-database-user-permission)
-    -   [Loading Sample Database to Your Own Mysql Server](#loading-sample-database-to-your-own-mysql-server)
-
--   [**Connecting to a Third Party Client**](#connecting-to-a-third-party-client)
-    -   [Installing DBeaver](#installing-dbeaver)
-    -   [Connecting MySQL Database to DBeaver](#connecting-mysql-database-to-dbeaver)
-
-## Setting Up
-
-### Installation
+### **Installation**
 
 This part describes a basic installation of a MySQL 5.7 database server on Ubuntu Linux, 18.04 to be specific.
 
     sudo apt-get update
     sudo apt-get install mysql-server
 
-### Allow Remote Access
+### **Allow Remote Access**
 
 If you want to connect to the MySQL database from another machine, you must open a port in your server’s firewall (the default port is 3306). This is not necessary if you intend to run the application that uses MySQL on the same server.
 
@@ -46,19 +23,19 @@ Run the following command to allow remote access to the MySQL server:
 
     sudo ufw allow mysql
 
-### Start MySQL service
+### **Start MySQL service**
 
 After the installation, the database service can be started via the following command:
 
     systemctl start mysql
 
-### Launch at Reboot
+### **Launch at Reboot**
 
 To launch the database server automatically after a reboot, run:
 
     systemctl enable mysql
 
-### Start the MySQL Shell
+### **Start the MySQL Shell**
 
 In the beginning, to start the MySQL shell, run:
 
@@ -70,7 +47,7 @@ Writing this command will bring up a password prompt. Put your system password a
 
 Press `ctrl + D` to stop the server.
 
-### Set the Root Password
+### **Set the Root Password**
 
 Enter the following command in the MySQL shell, replacing password with your new password:
 
@@ -86,7 +63,7 @@ To make the change take effect, type the following command:
 
     FLUSH PRIVILEGES;
 
-### View Users
+### **View Users**
 
 MySQL stores the user information in its own database. The name of the database is `mysql`. If you want to see what users are set up in the MySQL user table, run the following command:
 
@@ -104,7 +81,7 @@ You should see something like this:
     +------------------+-----------+-------------------------------------------+
     4 rows in set (0.00 sec)
 
-### Create a Database
+### **Create a Database**
 
 You can create a database named `test_db` via the following command:
 
@@ -132,7 +109,7 @@ To ensure the changes:
     FLUSH PRIVILEGES;
 
 
-### Creating Dummy Table in the Database
+### **Creating Dummy Table in the Database**
 ```
 -- create dummy table
 CREATE TABLE IF NOT EXISTS `student` (
@@ -181,13 +158,13 @@ INSERT INTO `student` (`id`, `name`, `class`, `mark`, `sex`) VALUES
 (34, 'Gain Toe', 'Seven', 69, 'male'),
 (35, 'Rows Noump', 'Six', 88, 'female');
 ```
-### Show Tables
+### **Show Tables**
 ```
 USE test_db;
 SHOW tables;
 ```
 
-### Delete a Database
+### **Delete a Database**
 
 To delete a database `test_db` run the following command:
 
@@ -195,7 +172,7 @@ To delete a database `test_db` run the following command:
 
     FLUSH PRIVILEGES;
 
-### Add a Database User
+### **Add a Database User**
 
 To create a new user (here, we created a new user named `redowan` with the password `password`), run the following command in the MySQL shell:
 
@@ -219,7 +196,7 @@ You should see something like below. Notice that a new user named `redowan` has 
     | redowan          | localhost | *0756A562377EDF6ED3AC45A00B356AAE6D3C6BB6 |
     +------------------+-----------+-------------------------------------------+
 
-### Delete a Database User
+### **Delete a Database User**
 
 To delete a database user (here, I'm deleting the user-`redowan`) run:
 
@@ -229,7 +206,7 @@ To delete a database user (here, I'm deleting the user-`redowan`) run:
 
     FlUSH PRIVILEGES;
 
-### Grant Database User Permissions
+### **Grant Database User Permissions**
 
 Give the user full permissions for your new database by running the following command (Here, I provided full permission of `test_db` to the user `redowan`:
 
@@ -241,7 +218,7 @@ If you want to give permission to all the databases, type:
 
     FlUSH PRIVILEGES;
 
-### Loading Sample Database to Your Own Mysql Server
+### **Loading Sample Database to Your Own Mysql Server**
 
 To load `mysqlsampledatabase.sql` to your own server (In this case the user is `redowan`. Provide database `password` in the prompt), first fireup the server and type the following commands:
 
@@ -268,15 +245,15 @@ You should see something like this:
 Notice that a new database named `classicmodels` has been added to the list.
 
 
-## Connecting to a Third Party Client
+## **Connecting to a Third Party Client**
 
 We will be using [DBeaver](https://github.com/dbeaver/dbeaver) as a third party client. While you can use the `mysql` shell to work on your data, a third partly client that make the experience much better with auto formatting, earsier import features, syntax highlighting etc.
 
-### Installing DBeaver
+### **Installing DBeaver**
 
 You can install DBeaver installer from [here](https://dbeaver.io/download/). Installation is pretty straight forward.
 
-### Connecting MySQL Database to DBeaver
+### **Connecting MySQL Database to DBeaver**
 
 Fire up DBeaver and you should be presented with this screen. Select `MySQL 8+` and go `next`.
 
@@ -288,7 +265,7 @@ The dialogue box will ask for credentials to connect to a database. In this case
 
 If everything is okay, you should see a success message. You can select the `SQL Editor` and start writing your MySQL scripts right away.
 
-## Connecting to MySQL Server via Python
+## **Connecting to MySQL Server via Python**
 
 `PyMySQL` and `DBUtils` can be used to connect to MySQL Server.
 ```python

@@ -1,6 +1,7 @@
-[submodule "themes/mainroad"]
-	path = themes/mainroad
-	url = https://github.com/vimux/mainroad
-[submodule "project/themes/mainroad"]
-	path = project/themes/mainroad
-	url = https://github.com/vimux/mainroad
+[submodule "themes/even"]
+	path = themes/even
+	url = https://github.com/olOwOlo/hugo-theme-even
+
+[submodule "themes/hugo-search-fuse-js"]
+	path = themes/hugo-search-fuse-js
+	url = https://github.com/kaushalmodi/hugo-search-fuse-js

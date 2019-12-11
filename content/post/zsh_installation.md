@@ -15,16 +15,16 @@ Although I'm on Debian Linux, Apple's recent announcement about replacing Bash w
 
 Instructions were applied and tested on debian based linux (Ubuntu)
 
-## Install Z Shell
+## **Install Z Shell**
 
-### GNU/Linux
+### **GNU/Linux**
 To install on a debian based linux, type:
 
 ``` bash
 $ apt install zsh
 ```
 
-### MacOS
+### **MacOS**
 
 Use homebrew to install zsh on MacOs. Run:
 
@@ -32,7 +32,7 @@ Use homebrew to install zsh on MacOs. Run:
 $ brew install zsh
 ```
 
-## Make Zsh as Your Default Shell
+## **Make Zsh as Your Default Shell**
 
 Run:
 
@@ -40,7 +40,7 @@ Run:
 $ chsh -s $(which zsh)
 ```
 
-## Load .profile from .zprofile
+## **Load .profile from .zprofile**
 
 Add the following lines to `~/.zprofile` and source via the command:
 `source ~/.zprofile`
@@ -49,7 +49,7 @@ Add the following lines to `~/.zprofile` and source via the command:
 [[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
 ```
 
-## Install Oh-My-Zsh Framework
+## **Install Oh-My-Zsh Framework**
 
 [Oh-My-Zsh](https://github.com/robbyrussell/oh-my-zsh) is the tool that makes zsh so much fun and overly configurable at the same time. So we'll tread here carefully. To install `oh-my-zsh` , type:
 
@@ -57,18 +57,18 @@ Add the following lines to `~/.zprofile` and source via the command:
 $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
-## Set Agnoster Theme
+## **Set Agnoster Theme**
 
 Agnoster is a fast and feature rich theme that ships with oh-my-zsh. To install agnoster:
 
 * Run `nano ~/.zshrc`
 * Set `ZSH_THEME="agnoster"`
 
-## Set Firacode As the Default Terminal Font
+## **Set Firacode As the Default Terminal Font**
 
 Your selected theme may not display all the glyphs if the default terminal font doesn't support them. Installing a font with glyphs and ligature support can solve this. I recommend installing `firacode` and setting that as your default terminal font. Install Fira Code From [here.](https://github.com/tonsky/FiraCode)
 
-## Set Syntax Highlighting
+## **Set Syntax Highlighting**
 
 Using [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) to achieve this.
 
@@ -86,7 +86,7 @@ $ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTO
 
 * Source `~/.zshrc`
 
-## Set Suggestions
+## **Set Suggestions**
 
 Using [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) to achieve this.
 
@@ -106,7 +106,7 @@ $ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh
 
 Start a new terminal session to see the effects!!! You might need to log out and log in again for the changes to be effective.
 
-## A Barebone ~/.zshrc
+## **A Barebone ~/.zshrc**
 
 Instead of adding the plugins individually, you can just install the plugins and then add this barebone config to your `~/.zshrc` . Don't forget to replace `YourUserName` with your username. Source your zshrc once you are done.
 
@@ -128,7 +128,7 @@ source $ZSH/oh-my-zsh.sh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=4"
 ```
 
-## Set Terminal Color (Optional)
+## **Set Terminal Color (Optional)**
 Optionally you customize your terminal color and in this case I've used [Gogh](http://mayccoll.github.io/Gogh) to achieve this.
 
   * Pre Install
@@ -148,31 +148,31 @@ Optionally you customize your terminal color and in this case I've used [Gogh](h
   ![alt](https://raw.githubusercontent.com/Mayccoll/Gogh/master/images/demos/gogh-demo-profile.gif)
 
 
-## Updating OMZ
+## **Updating OMZ**
 
 ``` bash
 $ upgrade_oh_my_zsh
   ```
 
-## Uninstall Zsh
+## **Uninstall Zsh**
 
 ``` bash
 $ sudo apt-get --purge remove zsh
 ```
 
-## Uninstall OMZ
+## **Uninstall OMZ**
 
 ``` bash
 $ uninstall_oh_my_zsh
 ```
 
-## Switch Back to Bash
+## **Switch Back to Bash**
 
 ``` bash
 $ chsh -s $(which bash)
 ```
 
-## Reference
+## **Reference**
 1. [Oh-My-Zsh](https://ohmyz.sh/)
 2. [FiraCode](https://github.com/tonsky/FiraCode)
 3. [Gogh](https://github.com/Mayccoll/Gogh)
