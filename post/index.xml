@@ -13,10 +13,10 @@
     
     <item>
       <title>A Minimalistic Approach to Zsh</title>
-      <link>https://rednafi.github.io/red-blogs/post/zsh_installation/</link>
+      <link>https://rednafi.github.io/red-blogs/post/linux/zsh_installation/</link>
       <pubDate>Tue, 29 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://rednafi.github.io/red-blogs/post/zsh_installation/</guid>
+      <guid>https://rednafi.github.io/red-blogs/post/linux/zsh_installation/</guid>
       <description>Although I&#39;m on Debian Linux, Apple&#39;s recent announcement about replacing Bash with Zsh on MacOS made me take a look at Z-shell aka zsh. It&#39;s a POSIX compliant Bash alternative that has been around for quite a long time. While Bash shell&#39;s efficiency and ubiquity make it hard to think about changing the default shell of your primary development machine, I find its features as an interactive shell to be somewhat limited.</description>
     </item>
     
