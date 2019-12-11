@@ -2,6 +2,7 @@
 title: "Electric Nostalgia"
 date: 2018-05-30
 draft: false
+author: Redowan Delowar
 ---
 ![Example image](https://miro.medium.com/max/700/1*Rz7h8QSq6-I42cI6hPEbRw.jpeg)
 

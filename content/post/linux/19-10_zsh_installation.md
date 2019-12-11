@@ -4,6 +4,7 @@ date: 2019-10-29
 draft: false
 tags: ["Shell", "Zsh"]
 categories: ["Linux"]
+author: Redowan Delowar
 ---
 
 ![Imgur](https://imgur.com/OOe4F0e.png)

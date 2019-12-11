@@ -4,6 +4,7 @@ date: 2019-05-26
 draft: false
 tags: ["MySQL"]
 categories: ["Linux", "Database"]
+author: Redowan Delowar
 ---
 ![Example image](https://images.unsplash.com/photo-1544383835-bda2bc66a55d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1921&q=80)
 
