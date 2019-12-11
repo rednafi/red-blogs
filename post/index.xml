@@ -22,10 +22,10 @@
     
     <item>
       <title>Dipping Toes into Bash Scripting</title>
-      <link>https://rednafi.github.io/red-blogs/post/brisk_bash/</link>
+      <link>https://rednafi.github.io/red-blogs/post/linux/brisk_bash/</link>
       <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://rednafi.github.io/red-blogs/post/brisk_bash/</guid>
+      <guid>https://rednafi.github.io/red-blogs/post/linux/brisk_bash/</guid>
       <description>Introduction Okay, here&#39;s a confession. I&#39;m the type of person who never picks up a new skill unless I absolutely have to. Although I have been using Debian based Linux personally and professionally for over a year, my knowledge on the command line and bash scripting have hopelessly remained stuck in a local minimum. Sure, I know my way around the terminal but working as a data scientist didn&#39;t require me to know the nitty-gritty details of bash scripting.</description>
     </item>
     
