@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://rednafi.github.io/red-blogs/post/linux/zsh_installation/</loc>
+    <loc>https://rednafi.github.io/red-blogs/post/linux/19-10_zsh_installation/</loc>
     <lastmod>2019-10-29T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -23,28 +23,28 @@
   </url>
   
   <url>
-    <loc>https://rednafi.github.io/red-blogs/post/linux/brisk_bash/</loc>
+    <loc>https://rednafi.github.io/red-blogs/post/linux/19-09_brisk_bash/</loc>
     <lastmod>2019-09-05T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://rednafi.github.io/red-blogs/post/mysql_linux/</loc>
+    <loc>https://rednafi.github.io/red-blogs/post/19-05_mysql_linux/</loc>
     <lastmod>2019-05-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://rednafi.github.io/red-blogs/post/electric_nostalgia/</loc>
+    <loc>https://rednafi.github.io/red-blogs/post/18-05_electric_nostalgia/</loc>
     <lastmod>2018-05-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://rednafi.github.io/red-blogs/post/murder_ackroyd/</loc>
+    <loc>https://rednafi.github.io/red-blogs/post/17-06_murder_ackroyd/</loc>
     <lastmod>2017-06-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
