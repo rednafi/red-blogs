@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Brisk Guide to Set Up MySQL on Linux - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Redowan Delowar" /><meta name="description" content="Setting Up Installation This part describes a basic installation of a MySQL 5.7 database server on Ubuntu Linux, 18.04 to be specific.
+sudo apt-get update sudo apt-get install mysql-server  Allow Remote Access If you want to connect to the MySQL database from another machine, you must open a port in your server’s firewall (the default port is 3306). This is not necessary if you intend to run the application that uses MySQL on the same server." /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.60.1 with theme even" />
+
+
+<link rel="canonical" href="rednafi.github.io/red-blogs/post/mysql_linux/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/rednafi.github.io/red-blogs/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/rednafi.github.io/red-blogs/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/rednafi.github.io/red-blogs/favicon-16x16.png">
+<link rel="manifest" href="/rednafi.github.io/red-blogs/manifest.json">
+<link rel="mask-icon" href="/rednafi.github.io/red-blogs/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/rednafi.github.io/red-blogs/dist/even.ddef2204.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Brisk Guide to Set Up MySQL on Linux" />
+<meta property="og:description" content="Setting Up Installation This part describes a basic installation of a MySQL 5.7 database server on Ubuntu Linux, 18.04 to be specific.
+sudo apt-get update sudo apt-get install mysql-server  Allow Remote Access If you want to connect to the MySQL database from another machine, you must open a port in your server’s firewall (the default port is 3306). This is not necessary if you intend to run the application that uses MySQL on the same server." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="rednafi.github.io/red-blogs/post/mysql_linux/" />
+<meta property="article:published_time" content="2019-05-26T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-05-26T00:00:00+00:00" />
+<meta itemprop="name" content="Brisk Guide to Set Up MySQL on Linux">
+<meta itemprop="description" content="Setting Up Installation This part describes a basic installation of a MySQL 5.7 database server on Ubuntu Linux, 18.04 to be specific.
+sudo apt-get update sudo apt-get install mysql-server  Allow Remote Access If you want to connect to the MySQL database from another machine, you must open a port in your server’s firewall (the default port is 3306). This is not necessary if you intend to run the application that uses MySQL on the same server.">
+<meta itemprop="datePublished" content="2019-05-26T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-05-26T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1297">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Brisk Guide to Set Up MySQL on Linux"/>
+<meta name="twitter:description" content="Setting Up Installation This part describes a basic installation of a MySQL 5.7 database server on Ubuntu Linux, 18.04 to be specific.
+sudo apt-get update sudo apt-get install mysql-server  Allow Remote Access If you want to connect to the MySQL database from another machine, you must open a port in your server’s firewall (the default port is 3306). This is not necessary if you intend to run the application that uses MySQL on the same server."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/rednafi.github.io/red-blogs/" class="logo">Abstraction Compiler</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="rednafi.github.io/red-blogs/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="rednafi.github.io/red-blogs/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="rednafi.github.io/red-blogs/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="rednafi.github.io/red-blogs/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/rednafi.github.io/red-blogs/" class="logo">Abstraction Compiler</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="rednafi.github.io/red-blogs/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="rednafi.github.io/red-blogs/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="rednafi.github.io/red-blogs/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="rednafi.github.io/red-blogs/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Brisk Guide to Set Up MySQL on Linux</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-05-26 </span>
+        
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#setting-up">Setting Up</a>
+      <ul>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#allow-remote-access">Allow Remote Access</a></li>
+        <li><a href="#start-mysql-service">Start MySQL service</a></li>
+        <li><a href="#launch-at-reboot">Launch at Reboot</a></li>
+        <li><a href="#start-the-mysql-shell">Start the MySQL Shell</a></li>
+        <li><a href="#set-the-root-password">Set the Root Password</a></li>
+        <li><a href="#view-users">View Users</a></li>
+        <li><a href="#create-a-database">Create a Database</a></li>
+        <li><a href="#creating-dummy-table-in-the-database">Creating Dummy Table in the Database</a></li>
+        <li><a href="#show-tables">Show Tables</a></li>
+        <li><a href="#delete-a-database">Delete a Database</a></li>
+        <li><a href="#add-a-database-user">Add a Database User</a></li>
+        <li><a href="#delete-a-database-user">Delete a Database User</a></li>
+        <li><a href="#grant-database-user-permissions">Grant Database User Permissions</a></li>
+        <li><a href="#loading-sample-database-to-your-own-mysql-server">Loading Sample Database to Your Own Mysql Server</a></li>
+      </ul>
+    </li>
+    <li><a href="#connecting-to-a-third-party-client">Connecting to a Third Party Client</a>
+      <ul>
+        <li><a href="#installing-dbeaver">Installing DBeaver</a></li>
+        <li><a href="#connecting-mysql-database-to-dbeaver">Connecting MySQL Database to DBeaver</a></li>
+      </ul>
+    </li>
+    <li><a href="#connecting-to-mysql-server-via-python">Connecting to MySQL Server via Python</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p><img src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1921&amp;q=80" alt="Example image"></p>
+<h2 id="setting-up"><strong>Setting Up</strong></h2>
+<h3 id="installation"><strong>Installation</strong></h3>
+<p>This part describes a basic installation of a MySQL 5.7 database server on Ubuntu Linux, 18.04 to be specific.</p>
+<pre><code>sudo apt-get update
+sudo apt-get install mysql-server
+</code></pre>
+<h3 id="allow-remote-access"><strong>Allow Remote Access</strong></h3>
+<p>If you want to connect to the MySQL database from another machine, you must open a port in your server’s firewall (the default port is 3306). This is not necessary if you intend to run the application that uses MySQL on the same server.</p>
+<p>Run the following command to allow remote access to the MySQL server:</p>
+<pre><code>sudo ufw allow mysql
+</code></pre>
+<h3 id="start-mysql-service"><strong>Start MySQL service</strong></h3>
+<p>After the installation, the database service can be started via the following command:</p>
+<pre><code>systemctl start mysql
+</code></pre>
+<h3 id="launch-at-reboot"><strong>Launch at Reboot</strong></h3>
+<p>To launch the database server automatically after a reboot, run:</p>
+<pre><code>systemctl enable mysql
+</code></pre>
+<h3 id="start-the-mysql-shell"><strong>Start the MySQL Shell</strong></h3>
+<p>In the beginning, to start the MySQL shell, run:</p>
+<pre><code>sudo mysql -u root -p
+</code></pre>
+<p>Writing this command will bring up a password prompt. Put your system password and press return. The following MySQL shell prompt should appear:</p>
+<pre><code>mysql&gt;
+</code></pre>
+<p>Press <code>ctrl + D</code> to stop the server.</p>
+<h3 id="set-the-root-password"><strong>Set the Root Password</strong></h3>
+<p>Enter the following command in the MySQL shell, replacing password with your new password:</p>
+<pre><code>UPDATE mysql.user SET authentication_string = PASSWORD('password')
+WHERE User = 'root';
+</code></pre>
+<p>You should see something like this in the command prompt:</p>
+<pre><code>Query OK, 1 row affected, 1 warning (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 1
+</code></pre>
+<p>To make the change take effect, type the following command:</p>
+<pre><code>FLUSH PRIVILEGES;
+</code></pre>
+<h3 id="view-users"><strong>View Users</strong></h3>
+<p>MySQL stores the user information in its own database. The name of the database is <code>mysql</code>. If you want to see what users are set up in the MySQL user table, run the following command:</p>
+<pre><code>SELECT User, Host, authentication_string FROM mysql.user;
+</code></pre>
+<p>You should see something like this:</p>
+<pre><code>+------------------+-----------+-------------------------------------------+
+| User             | Host      | authentication_string                     |
++------------------+-----------+-------------------------------------------+
+| root             | localhost | *2470C0C06DEE42FD1618BB99005ADCA2EC9D1E19 |
+| mysql.session    | localhost | *THISISNOTAVALIDPASSWORDTHATCANBEUSEDHERE |
+| mysql.sys        | localhost | *THISISNOTAVALIDPASSWORDTHATCANBEUSEDHERE |
+| debian-sys-maint | localhost | *8282611144B9D51437F4A2285E00A86701BF9737 |
++------------------+-----------+-------------------------------------------+
+4 rows in set (0.00 sec)
+</code></pre>
+<h3 id="create-a-database"><strong>Create a Database</strong></h3>
+<p>You can create a database named <code>test_db</code> via the following command:</p>
+<pre><code>CREATE DATABASE test_db;
+</code></pre>
+<p>List your databases via the following command:</p>
+<pre><code>SHOW DATABASES;
+</code></pre>
+<p>You should see something like this:</p>
+<pre><code>+--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
+| test_db            |
++--------------------+
+5 rows in set (0.00 sec)
+</code></pre>
+<p>To ensure the changes:</p>
+<pre><code>FLUSH PRIVILEGES;
+</code></pre>
+<h3 id="creating-dummy-table-in-the-database"><strong>Creating Dummy Table in the Database</strong></h3>
+<pre><code>-- create dummy table
+CREATE TABLE IF NOT EXISTS `student` (
+  `id` int(2) NOT NULL DEFAULT '0',
+  `name` varchar(50) CHARACTER SET utf8 NOT NULL DEFAULT '',
+  `class` varchar(10) CHARACTER SET utf8 NOT NULL DEFAULT '',
+  `mark` int(3) NOT NULL DEFAULT '0',
+  `sex` varchar(6) CHARACTER SET utf8 NOT NULL DEFAULT 'male'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- insert data into the dummy table
+INSERT INTO `student` (`id`, `name`, `class`, `mark`, `sex`) VALUES
+(1, 'John Deo', 'Four', 75, 'female'),
+(2, 'Max Ruin', 'Three', 85, 'male'),
+(3, 'Arnold', 'Three', 55, 'male'),
+(4, 'Krish Star', 'Four', 60, 'female'),
+(5, 'John Mike', 'Four', 60, 'female'),
+(6, 'Alex John', 'Four', 55, 'male'),
+(7, 'My John Rob', 'Fifth', 78, 'male'),
+(8, 'Asruid', 'Five', 85, 'male'),
+(9, 'Tes Qry', 'Six', 78, 'male'),
+(10, 'Big John', 'Four', 55, 'female'),
+(11, 'Ronald', 'Six', 89, 'female'),
+(12, 'Recky', 'Six', 94, 'female'),
+(13, 'Kty', 'Seven', 88, 'female'),
+(14, 'Bigy', 'Seven', 88, 'female'),
+(15, 'Tade Row', 'Four', 88, 'male'),
+(16, 'Gimmy', 'Four', 88, 'male'),
+(17, 'Tumyu', 'Six', 54, 'male'),
+(18, 'Honny', 'Five', 75, 'male'),
+(19, 'Tinny', 'Nine', 18, 'male'),
+(20, 'Jackly', 'Nine', 65, 'female'),
+(21, 'Babby John', 'Four', 69, 'female'),
+(22, 'Reggid', 'Seven', 55, 'female'),
+(23, 'Herod', 'Eight', 79, 'male'),
+(24, 'Tiddy Now', 'Seven', 78, 'male'),
+(25, 'Giff Tow', 'Seven', 88, 'male'),
+(26, 'Crelea', 'Seven', 79, 'male'),
+(27, 'Big Nose', 'Three', 81, 'female'),
+(28, 'Rojj Base', 'Seven', 86, 'female'),
+(29, 'Tess Played', 'Seven', 55, 'male'),
+(30, 'Reppy Red', 'Six', 79, 'female'),
+(31, 'Marry Toeey', 'Four', 88, 'male'),
+(32, 'Binn Rott', 'Seven', 90, 'female'),
+(33, 'Kenn Rein', 'Six', 96, 'female'),
+(34, 'Gain Toe', 'Seven', 69, 'male'),
+(35, 'Rows Noump', 'Six', 88, 'female');
+</code></pre><h3 id="show-tables"><strong>Show Tables</strong></h3>
+<pre><code>USE test_db;
+SHOW tables;
+</code></pre><h3 id="delete-a-database"><strong>Delete a Database</strong></h3>
+<p>To delete a database <code>test_db</code> run the following command:</p>
+<pre><code>DROP DATABASE test_db,
+
+FLUSH PRIVILEGES;
+</code></pre>
+<h3 id="add-a-database-user"><strong>Add a Database User</strong></h3>
+<p>To create a new user (here, we created a new user named <code>redowan</code> with the password <code>password</code>), run the following command in the MySQL shell:</p>
+<pre><code>CREATE USER 'redowan'@'localhost' IDENTIFIED BY 'password';
+
+FlUSH PRIVILEGES;
+</code></pre>
+<p>Ensure that the changes has been saved via running <code>FLUSH PRIVILEGES;</code>. Verify that a user has been successfully created via running the previous command:</p>
+<pre><code>SELECT User, Host, authentication_string FROM mysql.user;
+</code></pre>
+<p>You should see something like below. Notice that a new user named <code>redowan</code> has been created:</p>
+<pre><code>+------------------+-----------+-------------------------------------------+
+| User             | Host      | authentication_string                     |
++------------------+-----------+-------------------------------------------+
+| root             | localhost | *2470C0C06DEE42FD1618BB99005ADCA2EC9D1E19 |
+| mysql.session    | localhost | *THISISNOTAVALIDPASSWORDTHATCANBEUSEDHERE |
+| mysql.sys        | localhost | *THISISNOTAVALIDPASSWORDTHATCANBEUSEDHERE |
+| debian-sys-maint | localhost | *8282611144B9D51437F4A2285E00A86701BF9737 |
+| redowan          | localhost | *0756A562377EDF6ED3AC45A00B356AAE6D3C6BB6 |
++------------------+-----------+-------------------------------------------+
+</code></pre>
+<h3 id="delete-a-database-user"><strong>Delete a Database User</strong></h3>
+<p>To delete a database user (here, I'm deleting the user-<code>redowan</code>) run:</p>
+<pre><code>DELETE FROM mysql.user
+WHERE user='&lt;redowan&gt;'
+AND host = 'localhost'
+
+FlUSH PRIVILEGES;
+</code></pre>
+<h3 id="grant-database-user-permissions"><strong>Grant Database User Permissions</strong></h3>
+<p>Give the user full permissions for your new database by running the following command (Here, I provided full permission of <code>test_db</code> to the user <code>redowan</code>:</p>
+<pre><code>GRANT ALL PRIVILEGES ON test_db.table TO 'redowan'@'localhost';
+</code></pre>
+<p>If you want to give permission to all the databases, type:</p>
+<pre><code>GRANT ALL PRIVILEGES ON *.* TO 'redowan'@'localhost';
+
+FlUSH PRIVILEGES;
+</code></pre>
+<h3 id="loading-sample-database-to-your-own-mysql-server"><strong>Loading Sample Database to Your Own Mysql Server</strong></h3>
+<p>To load <code>mysqlsampledatabase.sql</code> to your own server (In this case the user is <code>redowan</code>. Provide database <code>password</code> in the prompt), first fireup the server and type the following commands:</p>
+<pre><code>mysql -u redowan -p test_db &lt; mysqlsampledatabase.sql;
+</code></pre>
+<p>Now run:</p>
+<pre><code>SHOW DATABASES;
+</code></pre>
+<p>You should see something like this:</p>
+<pre><code>+--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| classicmodels      |
+| mysql              |
+| performance_schema |
+| sys                |
+| test_db            |
++--------------------+
+6 rows in set (0.00 sec)
+</code></pre>
+<p>Notice that a new database named <code>classicmodels</code> has been added to the list.</p>
+<h2 id="connecting-to-a-third-party-client"><strong>Connecting to a Third Party Client</strong></h2>
+<p>We will be using <a href="https://github.com/dbeaver/dbeaver">DBeaver</a> as a third party client. While you can use the <code>mysql</code> shell to work on your data, a third partly client that make the experience much better with auto formatting, earsier import features, syntax highlighting etc.</p>
+<h3 id="installing-dbeaver"><strong>Installing DBeaver</strong></h3>
+<p>You can install DBeaver installer from <a href="https://dbeaver.io/download/">here</a>. Installation is pretty straight forward.</p>
+<h3 id="connecting-mysql-database-to-dbeaver"><strong>Connecting MySQL Database to DBeaver</strong></h3>
+<p>Fire up DBeaver and you should be presented with this screen. Select <code>MySQL 8+</code> and go <code>next</code>.</p>
+<p><img src="https://github.com/rednafi/brisk-SQL/raw/master/figs/fig1.png" alt="alt text"></p>
+<p>The dialogue box will ask for credentials to connect to a database. In this case, I will log into previously created local database <code>test_db</code> with the username <code>redowan</code>, corresponding password <code>password</code> and press <code>test connection</code> tab. A dialogue box might pop up, prompting you download necessary drivers.</p>
+<p><img src="https://github.com/rednafi/brisk-SQL/raw/master/figs/fig2.png" alt="alt text"></p>
+<p>If everything is okay, you should see a success message. You can select the <code>SQL Editor</code> and start writing your MySQL scripts right away.</p>
+<h2 id="connecting-to-mysql-server-via-python"><strong>Connecting to MySQL Server via Python</strong></h2>
+<p><code>PyMySQL</code> and <code>DBUtils</code> can be used to connect to MySQL Server.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">pymysql</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="kn">from</span> <span class="nn">dotenv</span> <span class="kn">import</span> <span class="n">load_dotenv</span>
+<span class="kn">from</span> <span class="nn">DBUtils.PooledDB</span> <span class="kn">import</span> <span class="n">PooledDB</span>
+
+<span class="n">load_dotenv</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="n">MYSQL_REPLICA_CONFIG</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="sa"></span><span class="s2">&#34;</span><span class="s2">host</span><span class="s2">&#34;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">SQL_HOST</span><span class="s2">&#34;</span><span class="p">)</span><span class="p">,</span>
+    <span class="sa"></span><span class="s2">&#34;</span><span class="s2">port</span><span class="s2">&#34;</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">SQL_PORT</span><span class="s2">&#34;</span><span class="p">)</span><span class="p">)</span><span class="p">,</span>
+    <span class="sa"></span><span class="s2">&#34;</span><span class="s2">db</span><span class="s2">&#34;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">SQL_DB</span><span class="s2">&#34;</span><span class="p">)</span><span class="p">,</span>
+    <span class="sa"></span><span class="s2">&#34;</span><span class="s2">password</span><span class="s2">&#34;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">SQL_PASSWORD</span><span class="s2">&#34;</span><span class="p">)</span><span class="p">,</span>
+    <span class="sa"></span><span class="s2">&#34;</span><span class="s2">user</span><span class="s2">&#34;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">SQL_USER</span><span class="s2">&#34;</span><span class="p">)</span><span class="p">,</span>
+    <span class="sa"></span><span class="s2">&#34;</span><span class="s2">charset</span><span class="s2">&#34;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">SQL_CHARSET</span><span class="s2">&#34;</span><span class="p">)</span><span class="p">,</span>
+    <span class="sa"></span><span class="s2">&#34;</span><span class="s2">cursorclass</span><span class="s2">&#34;</span><span class="p">:</span> <span class="n">pymysql</span><span class="o">.</span><span class="n">cursors</span><span class="o">.</span><span class="n">DictCursor</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="c1"># class to create database connection pooling</span>
+<span class="n">POOL</span> <span class="o">=</span> <span class="n">PooledDB</span><span class="p">(</span><span class="n">creator</span><span class="o">=</span><span class="n">pymysql</span><span class="p">,</span> <span class="n">mincached</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">maxcached</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="o">*</span><span class="o">*</span><span class="n">MYSQL_REPLICA_CONFIG</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">SqlPooled</span><span class="p">:</span>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">fetch_one</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span><span class="p">:</span>
+        <span class="n">conn</span> <span class="o">=</span> <span class="n">POOL</span><span class="o">.</span><span class="n">connection</span><span class="p">(</span><span class="p">)</span>
+        <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">(</span><span class="p">)</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchone</span><span class="p">(</span><span class="p">)</span>
+        <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">fetch_all</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span><span class="p">:</span>
+        <span class="n">conn</span> <span class="o">=</span> <span class="n">POOL</span><span class="o">.</span><span class="n">connection</span><span class="p">(</span><span class="p">)</span>
+        <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">(</span><span class="p">)</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">(</span><span class="p">)</span>
+        <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Redowan Delowar</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2019-05-26
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="rednafi.github.io/red-blogs/post/brisk_bash/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Dipping Toes into Bash Scripting</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="rednafi.github.io/red-blogs/post/tensorflow1.12_install/">
+            <span class="next-text nav-default">Brisk Guide to Install Tensorflow GPU on Linux (Ubuntu 18.04/18.10)</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="rednafi.github.io/red-blogs/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Redowan Delowar</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/rednafi.github.io/red-blogs/dist/even.26188efa.min.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

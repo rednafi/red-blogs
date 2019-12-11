@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>A Minimalistic Approach to Zsh - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Redowan Delowar" /><meta name="description" content="Although I&#39;m on Debian Linux, Apple&#39;s recent announcement about replacing Bash with Zsh on MacOS made me take a look at Z-shell aka zsh. It&#39;s a POSIX compliant Bash alternative that has been around for quite a long time. While Bash shell&#39;s efficiency and ubiquity make it hard to think about changing the default shell of your primary development machine, I find its features as an interactive shell to be somewhat limited." /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.60.1 with theme even" />
+
+
+<link rel="canonical" href="rednafi.github.io/red-blogs/post/zsh_installation/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/rednafi.github.io/red-blogs/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/rednafi.github.io/red-blogs/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/rednafi.github.io/red-blogs/favicon-16x16.png">
+<link rel="manifest" href="/rednafi.github.io/red-blogs/manifest.json">
+<link rel="mask-icon" href="/rednafi.github.io/red-blogs/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/rednafi.github.io/red-blogs/dist/even.ddef2204.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="A Minimalistic Approach to Zsh" />
+<meta property="og:description" content="Although I&#39;m on Debian Linux, Apple&#39;s recent announcement about replacing Bash with Zsh on MacOS made me take a look at Z-shell aka zsh. It&#39;s a POSIX compliant Bash alternative that has been around for quite a long time. While Bash shell&#39;s efficiency and ubiquity make it hard to think about changing the default shell of your primary development machine, I find its features as an interactive shell to be somewhat limited." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="rednafi.github.io/red-blogs/post/zsh_installation/" />
+<meta property="article:published_time" content="2019-10-29T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-10-29T00:00:00+00:00" />
+<meta itemprop="name" content="A Minimalistic Approach to Zsh">
+<meta itemprop="description" content="Although I&#39;m on Debian Linux, Apple&#39;s recent announcement about replacing Bash with Zsh on MacOS made me take a look at Z-shell aka zsh. It&#39;s a POSIX compliant Bash alternative that has been around for quite a long time. While Bash shell&#39;s efficiency and ubiquity make it hard to think about changing the default shell of your primary development machine, I find its features as an interactive shell to be somewhat limited.">
+<meta itemprop="datePublished" content="2019-10-29T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-10-29T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="603">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="A Minimalistic Approach to Zsh"/>
+<meta name="twitter:description" content="Although I&#39;m on Debian Linux, Apple&#39;s recent announcement about replacing Bash with Zsh on MacOS made me take a look at Z-shell aka zsh. It&#39;s a POSIX compliant Bash alternative that has been around for quite a long time. While Bash shell&#39;s efficiency and ubiquity make it hard to think about changing the default shell of your primary development machine, I find its features as an interactive shell to be somewhat limited."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/rednafi.github.io/red-blogs/" class="logo">Abstraction Compiler</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="rednafi.github.io/red-blogs/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="rednafi.github.io/red-blogs/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="rednafi.github.io/red-blogs/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="rednafi.github.io/red-blogs/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/rednafi.github.io/red-blogs/" class="logo">Abstraction Compiler</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="rednafi.github.io/red-blogs/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="rednafi.github.io/red-blogs/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="rednafi.github.io/red-blogs/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="rednafi.github.io/red-blogs/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">A Minimalistic Approach to Zsh</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-10-29 </span>
+        
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#install-z-shell">Install Z Shell</a>
+      <ul>
+        <li><a href="#gnulinux">GNU/Linux</a></li>
+        <li><a href="#macos">MacOS</a></li>
+      </ul>
+    </li>
+    <li><a href="#make-zsh-as-your-default-shell">Make Zsh as Your Default Shell</a></li>
+    <li><a href="#load-profile-from-zprofile">Load .profile from .zprofile</a></li>
+    <li><a href="#install-ohmyzsh-framework">Install Oh-My-Zsh Framework</a></li>
+    <li><a href="#set-agnoster-theme">Set Agnoster Theme</a></li>
+    <li><a href="#set-firacode-as-the-default-terminal-font">Set Firacode As the Default Terminal Font</a></li>
+    <li><a href="#set-syntax-highlighting">Set Syntax Highlighting</a></li>
+    <li><a href="#set-suggestions">Set Suggestions</a></li>
+    <li><a href="#a-barebone-zshrc">A Barebone ~/.zshrc</a></li>
+    <li><a href="#set-terminal-color-optional">Set Terminal Color (Optional)</a></li>
+    <li><a href="#updating-omz">Updating OMZ</a></li>
+    <li><a href="#uninstall-zsh">Uninstall Zsh</a></li>
+    <li><a href="#uninstall-omz">Uninstall OMZ</a></li>
+    <li><a href="#switch-back-to-bash">Switch Back to Bash</a></li>
+    <li><a href="#reference">Reference</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p><img src="https://imgur.com/OOe4F0e.png" alt="Imgur"></p>
+<p>Although I'm on Debian Linux, Apple's recent announcement about replacing Bash with Zsh on MacOS made me take a look at Z-shell aka zsh. It's a <a href="https://en.wikipedia.org/wiki/POSIX">POSIX</a> compliant Bash alternative that has been around for quite a long time. While Bash shell's efficiency and ubiquity make it hard to think about changing the default shell of your primary development machine, I find its features as an interactive shell to be somewhat limited. So I did some digging around and soon found out that zsh's lackluster default configurations and bloated ecosystem make it difficult for someone who just want to switch without any extra overhead. So, let's make the process quicker. Here is what we are aiming for:</p>
+<ul>
+<li>A working shell that can (almost always) take bash commands without complaining (looking at you fish)</li>
+<li>History based autocomplete</li>
+<li>Syntax highlighting</li>
+<li>Git branch annotations</li>
+</ul>
+<p>Instructions were applied and tested on debian based linux (Ubuntu)</p>
+<h2 id="install-z-shell"><strong>Install Z Shell</strong></h2>
+<h3 id="gnulinux"><strong>GNU/Linux</strong></h3>
+<p>To install on a debian based linux, type:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ apt install zsh
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="macos"><strong>MacOS</strong></h3>
+<p>Use homebrew to install zsh on MacOs. Run:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ brew install zsh
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="make-zsh-as-your-default-shell"><strong>Make Zsh as Your Default Shell</strong></h2>
+<p>Run:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ chsh -s <span class="k">$(</span>which zsh<span class="k">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="load-profile-from-zprofile"><strong>Load .profile from .zprofile</strong></h2>
+<p>Add the following lines to <code>~/.zprofile</code> and source via the command:
+<code>source ~/.zprofile</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">[</span><span class="o">[</span> -e ~/.profile <span class="o">]</span><span class="o">]</span> <span class="o">&amp;&amp;</span> emulate sh -c <span class="s1">&#39;source ~/.profile&#39;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="install-ohmyzsh-framework"><strong>Install Oh-My-Zsh Framework</strong></h2>
+<p><a href="https://github.com/robbyrussell/oh-my-zsh">Oh-My-Zsh</a> is the tool that makes zsh so much fun and overly configurable at the same time. So we'll tread here carefully. To install <code>oh-my-zsh</code> , type:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ sh -c <span class="s2">&#34;</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh<span class="k">)</span><span class="s2">&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="set-agnoster-theme"><strong>Set Agnoster Theme</strong></h2>
+<p>Agnoster is a fast and feature rich theme that ships with oh-my-zsh. To install agnoster:</p>
+<ul>
+<li>Run <code>nano ~/.zshrc</code></li>
+<li>Set <code>ZSH_THEME=&quot;agnoster&quot;</code></li>
+</ul>
+<h2 id="set-firacode-as-the-default-terminal-font"><strong>Set Firacode As the Default Terminal Font</strong></h2>
+<p>Your selected theme may not display all the glyphs if the default terminal font doesn't support them. Installing a font with glyphs and ligature support can solve this. I recommend installing <code>firacode</code> and setting that as your default terminal font. Install Fira Code From <a href="https://github.com/tonsky/FiraCode">here.</a></p>
+<h2 id="set-syntax-highlighting"><strong>Set Syntax Highlighting</strong></h2>
+<p>Using <a href="https://github.com/zsh-users/zsh-syntax-highlighting">zsh-syntax-highlighting</a> to achieve this.</p>
+<ul>
+<li>Clone this repository in oh-my-zsh's plugins directory</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git <span class="si">${</span><span class="nv">ZSH_CUSTOM</span><span class="k">:-</span><span class="p">~/.oh-my-zsh/custom</span><span class="si">}</span>/plugins/zsh-syntax-highlighting
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Activate the plugin in <code>~/.zshrc</code></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">  <span class="nv">plugins</span><span class="o">=</span><span class="o">(</span> <span class="o">[</span>plugins...<span class="o">]</span> zsh-syntax-highlighting<span class="o">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Source <code>~/.zshrc</code></li>
+</ul>
+<h2 id="set-suggestions"><strong>Set Suggestions</strong></h2>
+<p>Using <a href="https://github.com/zsh-users/zsh-autosuggestions">zsh-autosuggestions</a> to achieve this.</p>
+<ul>
+<li>Clone this repository into $ZSH_CUSTOM/plugins (by default ~/.oh-my-zsh/custom/plugins)</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ git clone https://github.com/zsh-users/zsh-autosuggestions <span class="si">${</span><span class="nv">ZSH_CUSTOM</span><span class="k">:-</span><span class="p">~/.oh-my-zsh/custom</span><span class="si">}</span>/plugins/zsh-autosuggestions
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Add the plugin to the list of plugins for Oh My Zsh to load (inside <code>~/.zshrc</code> )</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">  <span class="nv">plugins</span><span class="o">=</span><span class="o">(</span>zsh-autosuggestions<span class="o">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Source <code>~/.zshrc</code></li>
+</ul>
+<p>Start a new terminal session to see the effects!!! You might need to log out and log in again for the changes to be effective.</p>
+<h2 id="a-barebone-zshrc"><strong>A Barebone ~/.zshrc</strong></h2>
+<p>Instead of adding the plugins individually, you can just install the plugins and then add this barebone config to your <code>~/.zshrc</code> . Don't forget to replace <code>YourUserName</code> with your username. Source your zshrc once you are done.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">export</span> <span class="nv">ZSH</span><span class="o">=</span><span class="s2">&#34;/home/&lt;YourUserName&gt;/.oh-my-zsh&#34;</span>
+
+<span class="c1"># theme settings</span>
+<span class="nv">ZSH_THEME</span><span class="o">=</span><span class="s2">&#34;agnoster&#34;</span>
+<span class="nv">DEFAULT_USER</span><span class="o">=</span><span class="s2">&#34;YourUserName&#34;</span>
+prompt_context<span class="o">(</span><span class="o">)</span><span class="o">{</span><span class="o">}</span>
+
+<span class="c1"># pluging settings</span>
+<span class="nv">plugins</span><span class="o">=</span><span class="o">(</span>git zsh-syntax-highlighting zsh-autosuggestions<span class="o">)</span>
+
+<span class="c1"># source omz</span>
+<span class="nb">source</span> <span class="nv">$ZSH</span>/oh-my-zsh.sh
+
+<span class="c1"># autosuggestion highlight</span>
+<span class="nv">ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE</span><span class="o">=</span><span class="s2">&#34;fg=4&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="set-terminal-color-optional"><strong>Set Terminal Color (Optional)</strong></h2>
+<p>Optionally you customize your terminal color and in this case I've used <a href="http://mayccoll.github.io/Gogh">Gogh</a> to achieve this.</p>
+<ul>
+<li>Pre Install</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ sudo apt-get install dconf-cli uuid-runtime
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Install on Linux</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"> $ bash -c  <span class="s2">&#34;</span><span class="k">$(</span>wget -qO- https://git.io/vQgMr<span class="k">)</span><span class="s2">&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Install on MacOS</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$  bash -c  <span class="s2">&#34;</span><span class="k">$(</span>curl -sLo- https://git.io/vQgMr<span class="k">)</span><span class="s2">&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Put the code associated with your desired color scheme.
+<img src="https://raw.githubusercontent.com/Mayccoll/Gogh/master/images/demos/gogh-demo-profile.gif" alt="alt"></li>
+</ul>
+<h2 id="updating-omz"><strong>Updating OMZ</strong></h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ upgrade_oh_my_zsh
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="uninstall-zsh"><strong>Uninstall Zsh</strong></h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ sudo apt-get --purge remove zsh
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="uninstall-omz"><strong>Uninstall OMZ</strong></h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ uninstall_oh_my_zsh
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="switch-back-to-bash"><strong>Switch Back to Bash</strong></h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ chsh -s <span class="k">$(</span>which bash<span class="k">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="reference"><strong>Reference</strong></h2>
+<ol>
+<li><a href="https://ohmyz.sh/">Oh-My-Zsh</a></li>
+<li><a href="https://github.com/tonsky/FiraCode">FiraCode</a></li>
+<li><a href="https://github.com/Mayccoll/Gogh">Gogh</a></li>
+</ol>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Redowan Delowar</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2019-10-29
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        
+        <a class="next" href="rednafi.github.io/red-blogs/post/brisk_bash/">
+            <span class="next-text nav-default">Dipping Toes into Bash Scripting</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="rednafi.github.io/red-blogs/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Redowan Delowar</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/rednafi.github.io/red-blogs/dist/even.26188efa.min.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
