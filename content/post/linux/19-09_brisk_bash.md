@@ -2,6 +2,9 @@
 title: "Dipping Toes into Bash Scripting"
 date: 2019-09-05
 draft: false
+tags: ["Shell", "Bash"]
+categories: ["Linux"]
+author: Redowan Delowar
 ---
 
 ![Example image](https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80)
