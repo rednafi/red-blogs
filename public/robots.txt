@@ -1,2 +1,0 @@
-User-agent: *
-Sitemap: rednafi.github.io/red-blogs/sitemap.xml
