@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.60.1 with theme even" />
+<meta name="generator" content="Hugo 0.61.0 with theme even" />
 
 
 <link rel="canonical" href="https://rednafi.github.io/red-blogs/post/linux/19-09_brisk_bash/" />
@@ -34,7 +34,7 @@
 <link rel="mask-icon" href="/red-blogs/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/red-blogs/dist/even.2f3abde9.min.css" rel="stylesheet">
+<link href="/red-blogs/dist/even.20065d4a.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -48,7 +48,7 @@
 <meta itemprop="description" content="Introduction Okay, here&#39;s a confession. I&#39;m the type of person who never picks up a new skill unless I absolutely have to. Although I have been using Debian based Linux personally and professionally for over a year, my knowledge on the command line and bash scripting have hopelessly remained stuck in a local minimum. Sure, I know my way around the terminal but working as a data scientist didn&#39;t require me to know the nitty-gritty details of bash scripting.">
 <meta itemprop="datePublished" content="2019-09-05T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-09-05T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="2854">
+<meta itemprop="wordCount" content="2902">
 
 
 
@@ -154,7 +154,7 @@
     <li><a href="#basic-scripting-examples">Basic Scripting Examples</a>
       <ul>
         <li><a href="#running-a-shell-script">Running a Shell Script</a></li>
-        <li><a href="#conditionals-ifelse">conditionals (if-else)</a></li>
+        <li><a href="#conditionals-if-else">conditionals (if-else)</a></li>
         <li><a href="#for-loop">for loop</a></li>
         <li><a href="#while-loop">while loop</a></li>
         <li><a href="#functions">functions</a></li>
@@ -612,8 +612,15 @@ clear
 <ul>
 <li>
 <p>Create a file with <code>.sh</code> extension. I have used Ubuntu's built-in <code>nano</code> editor for that.</p>
-<pre><code>$ nano script.sh
-</code></pre></li>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ nano script.sh
+</code></pre></td></tr></table>
+</div>
+</div></li>
 <li>
 <p>Put your code in the <code>.sh</code> file</p>
 </li>
@@ -622,18 +629,39 @@ clear
 </li>
 <li>
 <p>Give permission to run:</p>
-<pre><code>$ chmod +x script.sh
-</code></pre></li>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ chmod +x script.sh
+</code></pre></td></tr></table>
+</div>
+</div></li>
 <li>
 <p>Run the script via:</p>
-<pre><code>$ ./script
-</code></pre></li>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ ./script
+</code></pre></td></tr></table>
+</div>
+</div></li>
 <li>
 <p>If the script takes in one or multiple arguments, then place those with spaces in between.</p>
-<pre><code>$ ./script arg1 arg2
-</code></pre></li>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ ./script arg1 arg2
+</code></pre></td></tr></table>
+</div>
+</div></li>
 </ul>
-<h3 id="conditionals-ifelse"><strong>conditionals (if-else)</strong></h3>
+<h3 id="conditionals-if-else"><strong>conditionals (if-else)</strong></h3>
 <ul>
 <li>
 <p><strong>Example-1:</strong> This program,</p>
@@ -686,9 +714,17 @@ clear
 <span class="k">fi</span>
 </code></pre></td></tr></table>
 </div>
-</div><pre><code>$ ./script.sh 12 13
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ ./script.sh 12 13
 The greater number is 13
-</code></pre></li>
+</code></pre></td></tr></table>
+</div>
+</div></li>
 <li>
 <p><strong>Example-2:</strong> This program,</p>
 <ul>
@@ -726,9 +762,17 @@ The greater number is 13
 <span class="k">fi</span>
 </code></pre></td></tr></table>
 </div>
-</div><pre><code>$ ./script.sh 20
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ ./script.sh 20
 Even
-</code></pre></li>
+</code></pre></td></tr></table>
+</div>
+</div></li>
 <li>
 <p><strong>Example-3:</strong> This program,</p>
 <ul>
@@ -825,9 +869,17 @@ Even
 <span class="k">fi</span>
 </code></pre></td></tr></table>
 </div>
-</div><pre><code>$ ./script.sh 12 13 add
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ ./script.sh 12 13 add
 25
-</code></pre></li>
+</code></pre></td></tr></table>
+</div>
+</div></li>
 </ul>
 <h3 id="for-loop"><strong>for loop</strong></h3>
 <ul>
@@ -857,12 +909,23 @@ Even
 <span class="k">done</span>
 </code></pre></td></tr></table>
 </div>
-</div><pre><code>$ ./script.sh
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ ./script.sh
 0
 3
 6
 9
-</code></pre></li>
+</code></pre></td></tr></table>
+</div>
+</div></li>
 <li>
 <p><strong>Example-2:</strong> Looping through files in a folder and printing them one by one</p>
 <div class="highlight"><div class="chroma">
@@ -889,10 +952,19 @@ Even
 <span class="k">done</span>
 </code></pre></td></tr></table>
 </div>
-</div><pre><code>$ ./script.sh
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ ./script.sh
 numbers.txt
 sorted_numbers.txt
-</code></pre></li>
+</code></pre></td></tr></table>
+</div>
+</div></li>
 <li>
 <p><strong>Example-3:</strong> This program,</p>
 <ul>
@@ -927,9 +999,17 @@ sorted_numbers.txt
 <span class="nb">echo</span> <span class="s2">&#34;</span><span class="s2">Total sum is </span><span class="nv">$sum</span><span class="s2">&#34;</span>
 </code></pre></td></tr></table>
 </div>
-</div><pre><code>$ ./script.sh
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ ./script.sh
 Total sum is 5050
-</code></pre></li>
+</code></pre></td></tr></table>
+</div>
+</div></li>
 <li>
 <p><strong>Example-4:</strong> This program,</p>
 <ul>
@@ -968,13 +1048,25 @@ Total sum is 5050
 <span class="k">done</span>
 </code></pre></td></tr></table>
 </div>
-</div><pre><code>$ ./script.sh 100
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ ./script.sh 100
 0
 1
 .
 .
 99
-</code></pre></li>
+</code></pre></td></tr></table>
+</div>
+</div></li>
 </ul>
 <h3 id="while-loop"><strong>while loop</strong></h3>
 <ul>
@@ -1016,9 +1108,17 @@ Total sum is 5050
 <span class="nb">echo</span> <span class="s2">&#34;</span><span class="s2">Factorial of </span><span class="nv">$1</span><span class="s2"> is </span><span class="nv">$factorial</span><span class="s2">&#34;</span>
 </code></pre></td></tr></table>
 </div>
-</div><pre><code>$ ./script.sh 5
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ ./script.sh 5
 Factorial of 5 is 120
-</code></pre></li>
+</code></pre></td></tr></table>
+</div>
+</div></li>
 <li>
 <p><strong>Example-2:</strong> This program,</p>
 <ul>
@@ -1062,10 +1162,19 @@ Factorial of 5 is 120
 <span class="k">done</span>
 </code></pre></td></tr></table>
 </div>
-</div><pre><code>$ ./script.sh
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ ./script.sh
 Enter two numbers (-1 to quit): 20 30
 30
-</code></pre></li>
+</code></pre></td></tr></table>
+</div>
+</div></li>
 <li>
 <p><strong>Example-3:</strong> This program,</p>
 <ul>
@@ -1100,14 +1209,27 @@ Enter two numbers (-1 to quit): 20 30
 <span class="k">done</span> &lt; <span class="s2">&#34;</span><span class="nv">$file</span><span class="s2">&#34;</span>
 </code></pre></td></tr></table>
 </div>
-</div><pre><code>$ ./script.sh files/numbers.txt
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ ./script.sh files/numbers.txt
 5
 55
 .
 .
 11
 10
-</code></pre></li>
+</code></pre></td></tr></table>
+</div>
+</div></li>
 </ul>
 <h3 id="functions"><strong>functions</strong></h3>
 <p>Functions are incredible tools when we need to reuse code. Creating functions are fairly straight
@@ -1150,9 +1272,17 @@ file_count <span class="o">(</span><span class="o">)</span> <span class="o">{</s
 <span class="nb">echo</span> <span class="k">$(</span> file_count <span class="nv">$1</span> <span class="k">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><pre><code>$ ./script.sh ./files
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ ./script.sh ./files
 $ 2
-</code></pre></li>
+</code></pre></td></tr></table>
+</div>
+</div></li>
 <li>
 <p><strong>Example-2:</strong> This function,</p>
 <ul>
@@ -1218,9 +1348,17 @@ greetings <span class="o">(</span><span class="o">)</span> <span class="o">{</sp
 <span class="nb">echo</span> <span class="k">$(</span> greetings <span class="nv">$1</span> <span class="k">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><pre><code>$ ./script.sh en
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ ./script.sh en
 Greetings Mortals!
-</code></pre></li>
+</code></pre></td></tr></table>
+</div>
+</div></li>
 <li>
 <p><strong>Example-3:</strong> This function,</p>
 <ul>
@@ -1266,10 +1404,19 @@ return_text <span class="o">(</span><span class="o">)</span> <span class="o">{</
 <span class="nb">echo</span> <span class="s2">&#34;</span><span class="k">$(</span> return_text <span class="nv">$1</span> <span class="k">)</span><span class="s2">&#34;</span>
 </code></pre></td></tr></table>
 </div>
-</div><pre><code>$ ./script.sh
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ ./script.sh
 /home/redowan/code/bash/files/numbers.txt
 /home/redowan/code/bash/files/sorted_numbers.txt
-</code></pre></li>
+</code></pre></td></tr></table>
+</div>
+</div></li>
 </ul>
 <h2 id="some-good-practices"><strong>Some Good Practices</strong></h2>
 <h3 id="use-a-bash-strict-mode"><strong>Use a Bash Strict Mode</strong></h3>
@@ -1286,10 +1433,19 @@ return_text <span class="o">(</span><span class="o">)</span> <span class="o">{</
 </div>
 </div><p>This can be regarded as an unofficial <strong>bash strict mode</strong> and often prevents many classes of sneaky bugs in your script. The above command can be synthesized into multiple commands.</p>
 <p><code>set -euo pipefail</code> is short for:</p>
-<pre><code>set -e
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">set -e
 set -u
 set -o pipefail
-</code></pre><p>Let's have a look at each of them separately.</p>
+</code></pre></td></tr></table>
+</div>
+</div><p>Let's have a look at each of them separately.</p>
 <ul>
 <li>
 <p><strong>set-e:</strong> This instruction forces the bash script to exit immediately if any command has a non zero exit status. If there is an issue in any of the lines in your code, the subsequent lines simply won't run.</p>

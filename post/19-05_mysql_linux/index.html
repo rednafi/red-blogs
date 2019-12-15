@@ -24,7 +24,7 @@ sudo apt-get update sudo apt-get install mysql-server  Allow Remote Access If yo
 
 
 
-<meta name="generator" content="Hugo 0.60.1 with theme even" />
+<meta name="generator" content="Hugo 0.61.0 with theme even" />
 
 
 <link rel="canonical" href="https://rednafi.github.io/red-blogs/post/19-05_mysql_linux/" />
@@ -35,7 +35,7 @@ sudo apt-get update sudo apt-get install mysql-server  Allow Remote Access If yo
 <link rel="mask-icon" href="/red-blogs/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/red-blogs/dist/even.2f3abde9.min.css" rel="stylesheet">
+<link href="/red-blogs/dist/even.20065d4a.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -51,7 +51,7 @@ sudo apt-get update sudo apt-get install mysql-server  Allow Remote Access If yo
 sudo apt-get update sudo apt-get install mysql-server  Allow Remote Access If you want to connect to the MySQL database from another machine, you must open a port in your server’s firewall (the default port is 3306). This is not necessary if you intend to run the application that uses MySQL on the same server.">
 <meta itemprop="datePublished" content="2019-05-26T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-05-26T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="1297">
+<meta itemprop="wordCount" content="1345">
 
 
 
@@ -247,56 +247,116 @@ Rows matched: 1  Changed: 1  Warnings: 1
 <pre><code>FLUSH PRIVILEGES;
 </code></pre>
 <h3 id="creating-dummy-table-in-the-database"><strong>Creating Dummy Table in the Database</strong></h3>
-<pre><code>-- create dummy table
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">-- create dummy table
 CREATE TABLE IF NOT EXISTS `student` (
-  `id` int(2) NOT NULL DEFAULT '0',
-  `name` varchar(50) CHARACTER SET utf8 NOT NULL DEFAULT '',
-  `class` varchar(10) CHARACTER SET utf8 NOT NULL DEFAULT '',
-  `mark` int(3) NOT NULL DEFAULT '0',
-  `sex` varchar(6) CHARACTER SET utf8 NOT NULL DEFAULT 'male'
+  `id` int(2) NOT NULL DEFAULT &#39;0&#39;,
+  `name` varchar(50) CHARACTER SET utf8 NOT NULL DEFAULT &#39;&#39;,
+  `class` varchar(10) CHARACTER SET utf8 NOT NULL DEFAULT &#39;&#39;,
+  `mark` int(3) NOT NULL DEFAULT &#39;0&#39;,
+  `sex` varchar(6) CHARACTER SET utf8 NOT NULL DEFAULT &#39;male&#39;
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- insert data into the dummy table
 INSERT INTO `student` (`id`, `name`, `class`, `mark`, `sex`) VALUES
-(1, 'John Deo', 'Four', 75, 'female'),
-(2, 'Max Ruin', 'Three', 85, 'male'),
-(3, 'Arnold', 'Three', 55, 'male'),
-(4, 'Krish Star', 'Four', 60, 'female'),
-(5, 'John Mike', 'Four', 60, 'female'),
-(6, 'Alex John', 'Four', 55, 'male'),
-(7, 'My John Rob', 'Fifth', 78, 'male'),
-(8, 'Asruid', 'Five', 85, 'male'),
-(9, 'Tes Qry', 'Six', 78, 'male'),
-(10, 'Big John', 'Four', 55, 'female'),
-(11, 'Ronald', 'Six', 89, 'female'),
-(12, 'Recky', 'Six', 94, 'female'),
-(13, 'Kty', 'Seven', 88, 'female'),
-(14, 'Bigy', 'Seven', 88, 'female'),
-(15, 'Tade Row', 'Four', 88, 'male'),
-(16, 'Gimmy', 'Four', 88, 'male'),
-(17, 'Tumyu', 'Six', 54, 'male'),
-(18, 'Honny', 'Five', 75, 'male'),
-(19, 'Tinny', 'Nine', 18, 'male'),
-(20, 'Jackly', 'Nine', 65, 'female'),
-(21, 'Babby John', 'Four', 69, 'female'),
-(22, 'Reggid', 'Seven', 55, 'female'),
-(23, 'Herod', 'Eight', 79, 'male'),
-(24, 'Tiddy Now', 'Seven', 78, 'male'),
-(25, 'Giff Tow', 'Seven', 88, 'male'),
-(26, 'Crelea', 'Seven', 79, 'male'),
-(27, 'Big Nose', 'Three', 81, 'female'),
-(28, 'Rojj Base', 'Seven', 86, 'female'),
-(29, 'Tess Played', 'Seven', 55, 'male'),
-(30, 'Reppy Red', 'Six', 79, 'female'),
-(31, 'Marry Toeey', 'Four', 88, 'male'),
-(32, 'Binn Rott', 'Seven', 90, 'female'),
-(33, 'Kenn Rein', 'Six', 96, 'female'),
-(34, 'Gain Toe', 'Seven', 69, 'male'),
-(35, 'Rows Noump', 'Six', 88, 'female');
-</code></pre><h3 id="show-tables"><strong>Show Tables</strong></h3>
-<pre><code>USE test_db;
+(1, &#39;John Deo&#39;, &#39;Four&#39;, 75, &#39;female&#39;),
+(2, &#39;Max Ruin&#39;, &#39;Three&#39;, 85, &#39;male&#39;),
+(3, &#39;Arnold&#39;, &#39;Three&#39;, 55, &#39;male&#39;),
+(4, &#39;Krish Star&#39;, &#39;Four&#39;, 60, &#39;female&#39;),
+(5, &#39;John Mike&#39;, &#39;Four&#39;, 60, &#39;female&#39;),
+(6, &#39;Alex John&#39;, &#39;Four&#39;, 55, &#39;male&#39;),
+(7, &#39;My John Rob&#39;, &#39;Fifth&#39;, 78, &#39;male&#39;),
+(8, &#39;Asruid&#39;, &#39;Five&#39;, 85, &#39;male&#39;),
+(9, &#39;Tes Qry&#39;, &#39;Six&#39;, 78, &#39;male&#39;),
+(10, &#39;Big John&#39;, &#39;Four&#39;, 55, &#39;female&#39;),
+(11, &#39;Ronald&#39;, &#39;Six&#39;, 89, &#39;female&#39;),
+(12, &#39;Recky&#39;, &#39;Six&#39;, 94, &#39;female&#39;),
+(13, &#39;Kty&#39;, &#39;Seven&#39;, 88, &#39;female&#39;),
+(14, &#39;Bigy&#39;, &#39;Seven&#39;, 88, &#39;female&#39;),
+(15, &#39;Tade Row&#39;, &#39;Four&#39;, 88, &#39;male&#39;),
+(16, &#39;Gimmy&#39;, &#39;Four&#39;, 88, &#39;male&#39;),
+(17, &#39;Tumyu&#39;, &#39;Six&#39;, 54, &#39;male&#39;),
+(18, &#39;Honny&#39;, &#39;Five&#39;, 75, &#39;male&#39;),
+(19, &#39;Tinny&#39;, &#39;Nine&#39;, 18, &#39;male&#39;),
+(20, &#39;Jackly&#39;, &#39;Nine&#39;, 65, &#39;female&#39;),
+(21, &#39;Babby John&#39;, &#39;Four&#39;, 69, &#39;female&#39;),
+(22, &#39;Reggid&#39;, &#39;Seven&#39;, 55, &#39;female&#39;),
+(23, &#39;Herod&#39;, &#39;Eight&#39;, 79, &#39;male&#39;),
+(24, &#39;Tiddy Now&#39;, &#39;Seven&#39;, 78, &#39;male&#39;),
+(25, &#39;Giff Tow&#39;, &#39;Seven&#39;, 88, &#39;male&#39;),
+(26, &#39;Crelea&#39;, &#39;Seven&#39;, 79, &#39;male&#39;),
+(27, &#39;Big Nose&#39;, &#39;Three&#39;, 81, &#39;female&#39;),
+(28, &#39;Rojj Base&#39;, &#39;Seven&#39;, 86, &#39;female&#39;),
+(29, &#39;Tess Played&#39;, &#39;Seven&#39;, 55, &#39;male&#39;),
+(30, &#39;Reppy Red&#39;, &#39;Six&#39;, 79, &#39;female&#39;),
+(31, &#39;Marry Toeey&#39;, &#39;Four&#39;, 88, &#39;male&#39;),
+(32, &#39;Binn Rott&#39;, &#39;Seven&#39;, 90, &#39;female&#39;),
+(33, &#39;Kenn Rein&#39;, &#39;Six&#39;, 96, &#39;female&#39;),
+(34, &#39;Gain Toe&#39;, &#39;Seven&#39;, 69, &#39;male&#39;),
+(35, &#39;Rows Noump&#39;, &#39;Six&#39;, 88, &#39;female&#39;);
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="show-tables"><strong>Show Tables</strong></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">USE test_db;
 SHOW tables;
-</code></pre><h3 id="delete-a-database"><strong>Delete a Database</strong></h3>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="delete-a-database"><strong>Delete a Database</strong></h3>
 <p>To delete a database <code>test_db</code> run the following command:</p>
 <pre><code>DROP DATABASE test_db,
 

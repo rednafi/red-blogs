@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.60.1 with theme even" />
+<meta name="generator" content="Hugo 0.61.0 with theme even" />
 
 
 <link rel="canonical" href="https://rednafi.github.io/red-blogs/post/linux/19-10_zsh_installation/" />
@@ -34,7 +34,7 @@
 <link rel="mask-icon" href="/red-blogs/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/red-blogs/dist/even.2f3abde9.min.css" rel="stylesheet">
+<link href="/red-blogs/dist/even.20065d4a.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -48,7 +48,7 @@
 <meta itemprop="description" content="Although I&#39;m on Debian Linux, Apple&#39;s recent announcement about replacing Bash with Zsh on MacOS made me take a look at Z-shell aka zsh. It&#39;s a POSIX compliant Bash alternative that has been around for quite a long time. While Bash shell&#39;s efficiency and ubiquity make it hard to think about changing the default shell of your primary development machine, I find its features as an interactive shell to be somewhat limited.">
 <meta itemprop="datePublished" content="2019-10-29T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-10-29T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="603">
+<meta itemprop="wordCount" content="607">
 
 
 
@@ -140,12 +140,12 @@
       </ul>
     </li>
     <li><a href="#make-zsh-as-your-default-shell">Make Zsh as Your Default Shell</a></li>
-    <li><a href="#load-profile-from-zprofile">Load .profile from .zprofile</a></li>
-    <li><a href="#install-ohmyzsh-framework">Install Oh-My-Zsh Framework</a></li>
+    <li><a href="#install-oh-my-zsh-framework">Install Oh-My-Zsh Framework</a></li>
     <li><a href="#set-agnoster-theme">Set Agnoster Theme</a></li>
     <li><a href="#set-firacode-as-the-default-terminal-font">Set Firacode As the Default Terminal Font</a></li>
     <li><a href="#set-syntax-highlighting">Set Syntax Highlighting</a></li>
     <li><a href="#set-suggestions">Set Suggestions</a></li>
+    <li><a href="#load-profile-from-zprofile">Load .profile from .zprofile</a></li>
     <li><a href="#a-barebone-zshrc">A Barebone ~/.zshrc</a></li>
     <li><a href="#set-terminal-color-optional">Set Terminal Color (Optional)</a></li>
     <li><a href="#updating-omz">Updating OMZ</a></li>
@@ -198,18 +198,7 @@
 <pre class="chroma"><code class="language-bash" data-lang="bash">$ chsh -s <span class="k">$(</span>which zsh<span class="k">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="load-profile-from-zprofile"><strong>Load .profile from .zprofile</strong></h2>
-<p>Add the following lines to <code>~/.zprofile</code> and source via the command:
-<code>source ~/.zprofile</code></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">[</span><span class="o">[</span> -e ~/.profile <span class="o">]</span><span class="o">]</span> <span class="o">&amp;&amp;</span> emulate sh -c <span class="s1">&#39;source ~/.profile&#39;</span>
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="install-ohmyzsh-framework"><strong>Install Oh-My-Zsh Framework</strong></h2>
+</div><h2 id="install-oh-my-zsh-framework"><strong>Install Oh-My-Zsh Framework</strong></h2>
 <p><a href="https://github.com/robbyrussell/oh-my-zsh">Oh-My-Zsh</a> is the tool that makes zsh so much fun and overly configurable at the same time. So we'll tread here carefully. To install <code>oh-my-zsh</code> , type:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -282,7 +271,18 @@
 <li>Source <code>~/.zshrc</code></li>
 </ul>
 <p>Start a new terminal session to see the effects!!! You might need to log out and log in again for the changes to be effective.</p>
-<h2 id="a-barebone-zshrc"><strong>A Barebone ~/.zshrc</strong></h2>
+<h2 id="load-profile-from-zprofile"><strong>Load .profile from .zprofile</strong></h2>
+<p>Add the following lines to <code>~/.zprofile</code> and source via the command:
+<code>source ~/.zprofile</code>. Make sure you are on zsh before running the source command.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">[</span><span class="o">[</span> -e ~/.profile <span class="o">]</span><span class="o">]</span> <span class="o">&amp;&amp;</span> emulate sh -c <span class="s1">&#39;source ~/.profile&#39;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="a-barebone-zshrc"><strong>A Barebone ~/.zshrc</strong></h2>
 <p>Instead of adding the plugins individually, you can just install the plugins and then add this barebone config to your <code>~/.zshrc</code> . Don't forget to replace <code>YourUserName</code> with your username. Source your zshrc once you are done.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -298,9 +298,6 @@
 </span><span class="lnt">10
 </span><span class="lnt">11
 </span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">export</span> <span class="nv">ZSH</span><span class="o">=</span><span class="s2">&#34;/home/&lt;YourUserName&gt;/.oh-my-zsh&#34;</span>
@@ -315,9 +312,6 @@ prompt_context<span class="o">(</span><span class="o">)</span><span class="o">{<
 
 <span class="c1"># source omz</span>
 <span class="nb">source</span> <span class="nv">$ZSH</span>/oh-my-zsh.sh
-
-<span class="c1"># autosuggestion highlight</span>
-<span class="nv">ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE</span><span class="o">=</span><span class="s2">&#34;fg=4&#34;</span>
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="set-terminal-color-optional"><strong>Set Terminal Color (Optional)</strong></h2>
