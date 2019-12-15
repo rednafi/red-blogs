@@ -43,15 +43,6 @@ Run:
 $ chsh -s $(which zsh)
 ```
 
-## **Load .profile from .zprofile**
-
-Add the following lines to `~/.zprofile` and source via the command:
-`source ~/.zprofile`
-
-``` bash
-[[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
-```
-
 ## **Install Oh-My-Zsh Framework**
 
 [Oh-My-Zsh](https://github.com/robbyrussell/oh-my-zsh) is the tool that makes zsh so much fun and overly configurable at the same time. So we'll tread here carefully. To install `oh-my-zsh` , type:
@@ -109,6 +100,15 @@ $ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh
 
 Start a new terminal session to see the effects!!! You might need to log out and log in again for the changes to be effective.
 
+## **Load .profile from .zprofile**
+
+Add the following lines to `~/.zprofile` and source via the command:
+`source ~/.zprofile`. Make sure you are on zsh before running the source command.
+
+``` bash
+[[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
+```
+
 ## **A Barebone ~/.zshrc**
 
 Instead of adding the plugins individually, you can just install the plugins and then add this barebone config to your `~/.zshrc` . Don't forget to replace `YourUserName` with your username. Source your zshrc once you are done.
@@ -126,9 +126,6 @@ plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
 
 # source omz
 source $ZSH/oh-my-zsh.sh
-
-# autosuggestion highlight
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=4"
 ```
 
 ## **Set Terminal Color (Optional)**
