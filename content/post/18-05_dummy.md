@@ -1,6 +1,6 @@
 ---
-title: "Electric Nostalgia"
-date: 2018-05-30
+title: "Shaka laka boom"
+date: 2020-01-21
 draft: false
 author: Redowan Delowar
 ---
