@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>MySQL on Even - A super concise theme for Hugo</title>
@@ -18,7 +18,7 @@
       
       <guid>https://rednafi.github.io/red-blogs/post/19-05_mysql_linux/</guid>
       <description>Setting Up Installation This part describes a basic installation of a MySQL 5.7 database server on Ubuntu Linux, 18.04 to be specific.
-1 2  sudo apt-get update sudo apt-get install mysql-server   Allow Remote Access If you want to connect to the MySQL database from another machine, you must open a port in your server’s firewall (the default port is 3306). This is not necessary if you intend to run the application that uses MySQL on the same server.</description>
+sudo apt-get update sudo apt-get install mysql-server  Allow Remote Access If you want to connect to the MySQL database from another machine, you must open a port in your server’s firewall (the default port is 3306). This is not necessary if you intend to run the application that uses MySQL on the same server.</description>
     </item>
     
   </channel>
