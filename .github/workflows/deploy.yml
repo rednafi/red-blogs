@@ -28,4 +28,4 @@ jobs:
       - name: Start Deployment
         run: |
           chmod +x ./publish_to_ghpages.sh
-          
+          ./publish_to_ghpages.sh
