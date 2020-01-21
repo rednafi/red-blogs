@@ -29,3 +29,5 @@ jobs:
         run: |
           chmod +x ./publish_to_ghpages.sh
           ./publish_to_ghpages.sh
+        with:
+          github_token: ${{ secrets.DEPLOY_KEY }}
