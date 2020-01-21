@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Shell on Even - A super concise theme for Hugo</title>
@@ -17,7 +17,7 @@
       <pubDate>Tue, 29 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://rednafi.github.io/red-blogs/post/linux/19-10_zsh_installation/</guid>
-      <description>Although I&amp;rsquo;m on Debian Linux, Apple&amp;rsquo;s recent announcement about replacing Bash with Zsh on MacOS made me take a look at Z-shell aka zsh. It&amp;rsquo;s a POSIX compliant Bash alternative that has been around for quite a long time. While Bash shell&amp;rsquo;s efficiency and ubiquity make it hard to think about changing the default shell of your primary development machine, I find its features as an interactive shell to be somewhat limited.</description>
+      <description>Although I&#39;m on Debian Linux, Apple&#39;s recent announcement about replacing Bash with Zsh on MacOS made me take a look at Z-shell aka zsh. It&#39;s a POSIX compliant Bash alternative that has been around for quite a long time. While Bash shell&#39;s efficiency and ubiquity make it hard to think about changing the default shell of your primary development machine, I find its features as an interactive shell to be somewhat limited.</description>
     </item>
     
     <item>
@@ -26,7 +26,7 @@
       <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://rednafi.github.io/red-blogs/post/linux/19-09_brisk_bash/</guid>
-      <description>Introduction Okay, here&amp;rsquo;s a confession. I&amp;rsquo;m the type of person who never picks up a new skill unless I absolutely have to. Although I have been using Debian based Linux personally and professionally for over a year, my knowledge on the command line and bash scripting have hopelessly remained stuck in a local minimum. Sure, I know my way around the terminal but working as a data scientist didn&amp;rsquo;t require me to know the nitty-gritty details of bash scripting.</description>
+      <description>Introduction Okay, here&#39;s a confession. I&#39;m the type of person who never picks up a new skill unless I absolutely have to. Although I have been using Debian based Linux personally and professionally for over a year, my knowledge on the command line and bash scripting have hopelessly remained stuck in a local minimum. Sure, I know my way around the terminal but working as a data scientist didn&#39;t require me to know the nitty-gritty details of bash scripting.</description>
     </item>
     
   </channel>
