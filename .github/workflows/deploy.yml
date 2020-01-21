@@ -27,7 +27,9 @@ jobs:
           git submodule sync && git submodule update --init
       - name: Start Deployment
         run: |
+          echo "Github Action Creds"
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
           chmod +x ./publish_to_ghpages.sh
           ./publish_to_ghpages.sh
-        with:
-          github_token: ${{ secrets.DEPLOY_KEY }}
