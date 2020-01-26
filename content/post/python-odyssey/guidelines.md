@@ -1,3 +1,14 @@
+---
+title: "Python Code Style for Sanity"
+date: 2020-01-27
+draft: false
+tags: ["Styleguide", "Idiom"]
+categories: ["Python"]
+author: Redowan Delowar
+---
+
+
+
 <div align="center">
 <h1> Python Code Style for Sanity </h1>
 <p> <b> Simplifield Coding Directives for Less Cognitive Overhead </b> </p>
@@ -12,21 +23,6 @@
 
 </div>
 
-## Contents
-
-* [Auto-formatters](#auto-formatters)
-* [Functions](#functions)
-* [Docstring](#docstring)
-* [Imports](#imports)
-* [Whitespaces](#whitespaces)
-* [Naming Conventions](#naming-conventions)
-* [Exception Handling](#exception-handling)
-* [Logging](#logging)
-* [Testing](#testing)
-* [Flask](#flask)
-    * [Project Structure](#project-structure)
-* [The Holy Grail of Being Pythonic](#the-holy-grail-of-being-pythonic)
-* [References](#references)
 
 
 ## Auto-formatters
