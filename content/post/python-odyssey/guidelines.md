@@ -7,8 +7,6 @@ categories: ["Python"]
 author: Redowan Delowar
 ---
 
-
-
 <div align="center">
 <h1> Python Code Style for Sanity </h1>
 <p> <b> Simplifield Coding Directives for Less Cognitive Overhead </b> </p>
