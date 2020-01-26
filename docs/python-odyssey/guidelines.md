@@ -1,11 +1,5 @@
----
-title: "Python Code Style for Sanity"
-date: 2020-01-27
-draft: false
-tags: ["Styleguide", "Idiom"]
-categories: ["Python"]
-author: Redowan Delowar
----
+Sanity
+=======================
 
 <div align="center">
 <h1> Python Code Style for Sanity </h1>
