@@ -114,18 +114,45 @@ Add the following lines to `~/.zprofile` and source via the command:
 Instead of adding the plugins individually, you can just install the plugins and then add this barebone config to your `~/.zshrc` . Don't forget to replace `YourUserName` with your username. Source your zshrc once you are done.
 
 ``` bash
-export ZSH="/home/<YourUserName>/.oh-my-zsh"
+# omz path
+export ZSH="/home/rednafi/.oh-my-zsh"
+
 
 # theme settings
 ZSH_THEME="agnoster"
-DEFAULT_USER="YourUserName"
-prompt_context(){}
+DEFAULT_USER="rednafi"
+prompt_context() {}
 
 # pluging settings
 plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
 
+# autosuggestion highlight
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=4"
+
 # source omz
 source $ZSH/oh-my-zsh.sh
+
+
+#History setup
+HISTFILE=$HOME/.zsh_history
+HISTSIZE=100000
+SAVEHIST=$HISTSIZ
+
+setopt hist_ignore_all_dups # remove older duplicate entries from history
+setopt hist_reduce_blanks   # remove superfluous blanks from history items
+setopt inc_append_history   # save history entries as soon as they are entered
+setopt share_history        # share history between different instances of the shell
+setopt auto_cd              # cd by typing directory name if it's not a command
+setopt correct_all          # autocorrect commands
+setopt auto_list            # automatically list choices on ambiguous completion
+setopt auto_menu            # automatically use menu completion
+setopt always_to_end        # move cursor to end if word had one match
+
+zstyle ':completion:*' menu select
+zstyle ':completion:*' group-name ''                                        # group results by category
+zstyle ':completion:::::' completer _expand _complete _ignored _approximate #enable approximate matches for completion
+
+
 ```
 
 ## **Set Terminal Color (Optional)**
