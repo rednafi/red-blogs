@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Deployment Notes
 
 * **Clone the repository:**
@@ -9,3 +10,8 @@
     $ chmod +x publish_to_ghpages
     $ ./publish_to_ghpages.sh
     ```
+=======
+<div align='center'>
+<h2>Abstraction Compiler</h2>
+</div>
+>>>>>>> 6f429fd0cdf09c2f01515bbac7ac3afc2a11c89c
